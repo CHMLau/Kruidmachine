@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/kruid','KruidController@show');
+Route::get('/kruid/nieuw','KruidController@create');
+Route::post('/kruid/nieuw','KruidController@store');
+
 Route::get('/account','AccountController@show');
 
 Route::get('/', function () {

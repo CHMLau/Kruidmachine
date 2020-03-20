@@ -4,12 +4,13 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use Illuminate\Http\Request;
-use App\account;
+use App\Account;
 
 class AccountController extends Controller
 {
   public function show(){
-    return Account::all();
+    return account::all();
   }
 }
