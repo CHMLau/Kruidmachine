@@ -14,8 +14,12 @@ class CreateCompartimentTable extends Migration
     public function up()
     {
         Schema::create('compartiment', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->integer('comp_nummer')->unique();
+            $table->string('kruid');
+            $table->integer('comp_volheid');
+            $table->boolean('state');
+
+            $table->foreign('kruid')->references('kruid')->on('kruid');
         });
     }
 

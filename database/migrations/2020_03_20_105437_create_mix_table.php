@@ -14,8 +14,14 @@ class CreateMixTable extends Migration
     public function up()
     {
         Schema::create('mix', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->string('naam');
+            $table->string('kruid');
+            $table->integer('hoeveelheid');
+            $table->string('omschrijving');
+            $table->string('gebruikersnaam');
+
+            $table->foreign('kruid')->references('kruid')->on('kruid');
+            $table->foreign('gebruikersnaam')->references('gebruikersnaam')->on('account');
         });
     }
 
