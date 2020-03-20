@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/account','AccountController@show');
+
 Route::get('/', function () {
     return view('welcome');
 });
