@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/kruid','KruidController@show')->middleware(['auth','checkGebruikersnaam']);
+Route::get('/kruid','KruidController@show');
 Route::get('/kruid/nieuw','KruidController@create');
 Route::post('/kruid/nieuw','KruidController@store');
 

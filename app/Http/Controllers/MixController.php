@@ -15,10 +15,10 @@ class MixController extends Controller
     }
     
     public function show_gebruikerMix(){
-        if(Mix::where('gebruikersnaam','=', 'default')){
+        if((Auth::user()) == NULL){
             return Mix::all();
         }
-        return Mix::where('gebruikersnaam','=', Auth::user()->name)->first();
+        return Mix::where('gebruikersnaam','=', Auth::user()->name)->get();
     }
     public function create(){
         return view('mix.mixPost')->with('mix',Mix::all())->with('kruid',Kruid::all());
@@ -33,6 +33,7 @@ class MixController extends Controller
         $mix->hoeveelheid1= $request->input('hoeveelheid1');
         $mix->hoeveelheid2= $request->input('hoeveelheid2');
         $mix->hoeveelheid3= $request->input('hoeveelheid3');
+        $mix->gebruikersnaam = Auth::user()->name;
         $mix->save();
         
         return redirect('/mix');
