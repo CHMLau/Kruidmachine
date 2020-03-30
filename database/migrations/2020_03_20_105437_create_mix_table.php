@@ -22,7 +22,7 @@ class CreateMixTable extends Migration
             $table->integer('hoeveelheid2');
             $table->integer('hoeveelheid3')->nullable();
             $table->string('omschrijving')->nullable();
-            $table->string('gebruikersnaam')->default("default");
+            $table->string('gebruikersnaam')->default('default');
             
             $table->foreign('kruid1')->references('kruid')->on('kruid');
             $table->foreign('kruid2')->references('kruid')->on('kruid');

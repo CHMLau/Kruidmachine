@@ -1,9 +1,10 @@
 @extends('mix.layout')
 @section('content')
-		<form id="form" action="/mix/nieuw" method="POST">
+		<form id="form" action="/mix/edit/{{$mix->naam}}" method="POST">
 			{{ csrf_field() }}
+            {{ method_field('PATCH') }}
 			<label for="naam">Naam: </label>
-			<input type="text" name="naam" value="">
+			<input type="text" name="naam" value="{{$mix->naam}}">
 
 			<select name="kruid1">
 			@foreach($kruid as $kruiden)
@@ -30,16 +31,22 @@
 			</select>
 			
 			<label for="hoeveelheid1">Hoeveelheid 1: </label>
-			<input type="number" name="hoeveelheid1" value="">
+			<input type="number" name="hoeveelheid1" value="{{$mix->hoeveelheid1}}">
 			
 			<label for="hoeveelheid2">Hoeveelheid 2: </label>
-			<input type="number" name="hoeveelheid2" value="">
+			<input type="number" name="hoeveelheid2" value="{{$mix->hoeveelheid2}}">
 			
 			<label for="hoeveelheid3">Hoeveelheid 3: </label>
-			<input type="number" name="hoeveelheid3" value="">
+			<input type="number" name="hoeveelheid3" value="{{$mix->hoeveelheid3}}">
 
 			<label for="omschrijving">Omschrijving: </label>
-			<input type="text" name="omschrijving" value="">
-			<button id="button" type="submit" name="button">Post</button>
+			<input type="text" name="omschrijving" value="{{$mix->omschrijving}}">
+
+			<button id="button" type="submit" name="button">Update</button>
+		</form>
+		<form id="form" action="/mix/edit/{{$mix->naam}}" method="POST">
+			{{ csrf_field() }}
+            {{ method_field('DELETE') }}
+			<button id="button" type="submit" name="button">Delete</button>
 		</form>
 @endsection

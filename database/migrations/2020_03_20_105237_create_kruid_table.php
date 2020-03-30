@@ -14,7 +14,7 @@ class CreateKruidTable extends Migration
     public function up()
     {
         Schema::create('kruid', function (Blueprint $table) {
-            $table->string('kruid')->unique();
+            $table->string('kruid');
             $table->integer('comp_nummer')->nullable();
             //$table->foreign('comp_nummer')->references('comp_nummer')->on('compartiment');
         });
