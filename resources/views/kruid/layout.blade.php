@@ -15,7 +15,7 @@
 			</a>
 			<ul>
 				<li>
-					<a href="">home</a>         
+					<a href="{{ url('/')}}">home</a>         
 					<div class="nav__line"></div>
 				</li>
 				<div class="streepje">_</div>

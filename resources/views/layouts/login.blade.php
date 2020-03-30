@@ -15,13 +15,13 @@
 			</a>
 			<ul>
 				<li>
-					<a href="">home</a>         
+					<a href="{{ url('/')}}">home</a>         
 					<div class="nav__line"></div>
 				</li>
 				<div class="streepje">_</div>
 				<li>
 					<a href="{{url ('/kruid') }}">spices</a>         
-					<!-- <div class="nav__line"></div> -->
+					<div class="nav__line"></div>
 				</li>
 				<div class="streepje">_</div>
 				<li>
@@ -31,7 +31,7 @@
 				<div class="streepje">_</div>
 				<li>
 					<a class="active" href="{{ url('/login')}}">login</a>
-					<div class="nav__line"></div>
+					<!-- <div class="nav__line"></div> -->
 				</li>
 			</ul>
 		</nav>
