@@ -11,21 +11,21 @@
 		<nav>
 			<a href="">
 				<!-- <img src="{{ asset('img/logo.png') }}" alt=""> -->
-				<img src="https://i.imgur.com/B5rIWok.png" title="source: imgur.com" />
+				<img src="../../../img/logoBlack.png" title="source: imgur.com" />
 			</a>
 			<ul>
 				<li>
-					<a href="{{ url('/')}}">home</a>         
+					<a href="{{ url('/')}}">home</a>
 					<div class="nav__line"></div>
 				</li>
 				<div class="streepje">_</div>
 				<li>
-					<a href="{{url ('/kruid') }}">spices</a>         
+					<a href="{{url ('/kruid') }}">spices</a>
 					<div class="nav__line"></div>
 				</li>
 				<div class="streepje">_</div>
 				<li>
-					<a href="{{ url('/mix')}}">mixes</a>         
+					<a href="{{ url('/mix')}}">mixes</a>
 					<div class="nav__line"></div>
 				</li>
 				<div class="streepje">_</div>
@@ -35,7 +35,7 @@
 				</li>
 			</ul>
 		</nav>
-	
+
 		<main>
 			@yield('content')
 		</main>

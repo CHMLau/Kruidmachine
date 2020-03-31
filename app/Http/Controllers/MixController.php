@@ -9,11 +9,11 @@ use App\Kruid;
 use Auth;
 
 class MixController extends Controller
-{       
+{
     public function show(){
         return view('mix.mix')->with('mix',Mix::all());
     }
-    
+
     public function show_gebruikerMix(){
         if((Auth::user()) == NULL){
             return view('mix.mix')->with('mix',Mix::all());
@@ -41,16 +41,16 @@ class MixController extends Controller
             $mix->gebruikersnaam = Auth::user()->name;
         }
         $mix->save();
-        
+
         return redirect('/mix');
-    }   
+    }
 
     public function edit($mix){
         $mixData = Mix::where('naam','=',$mix)->first();
         // $mixData = Mix::where('naam','!=', NULL )->first();
         return view('mix.mixEdit')->with('mix',$mixData)->with('kruid',Kruid::all());
     }
-    
+
     public function update(Request $request, $mix){
         $mix = Mix::find($mix);
         $mix->naam= $request->input('naam');
@@ -87,11 +87,31 @@ class MixController extends Controller
         }
     }
 
-  
+    public function maken($mix) {
+        try{
+          Mix::where('naam', $mix)->update([
+            'maken' => 'ja'
+          ]);
+          return redirect('/mix');
+        }
+        catch(Exception $e){
+            return redirect('/mix');
+        }
+    }
+
+    public function make($mix) {
+      $mix = Mix::where('naam', '=',$mix)->first();
+
+      if ($mix->maken == 'nee') {
+        $mix->maken = 'ja';
+      }
+
+      else {
+        $mix->maken = 'nee';
+      }
+      $mix->save();
+      return redirect('/mix');
+    }
+
+
 }
-
-   
-
-
-
-

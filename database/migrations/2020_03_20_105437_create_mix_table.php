@@ -15,19 +15,22 @@ class CreateMixTable extends Migration
     {
         Schema::create('mix', function (Blueprint $table) {
             $table->string('naam');
-            $table->string('kruid1');
-            $table->string('kruid2');
+            $table->string('kruid1')->nullable();
+            $table->string('kruid2')->nullable();
             $table->string('kruid3')->nullable();
-            $table->integer('hoeveelheid1');
-            $table->integer('hoeveelheid2');
-            $table->integer('hoeveelheid3')->nullable();
+            $table->string('hoeveelheid1')->nullable();
+            $table->string('hoeveelheid2')->nullable();
+            $table->string('hoeveelheid3')->nullable();
             $table->string('omschrijving')->nullable();
             $table->string('gebruikersnaam')->default('default');
-            
+            $table->string('maken')->default('nee');
+
+
             $table->foreign('kruid1')->references('kruid')->on('kruid');
             $table->foreign('kruid2')->references('kruid')->on('kruid');
             $table->foreign('kruid3')->references('kruid')->on('kruid');
-            //$table->foreign('gebruikersnaam')->references('gebruikersnaam')->on('account');
+
+            // $table->foreign('gebruikersnaam')->references('gebruikersnaam')->on('account');
         });
     }
 

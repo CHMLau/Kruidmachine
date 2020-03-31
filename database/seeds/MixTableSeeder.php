@@ -14,22 +14,22 @@ class MixTableSeeder extends Seeder
         DB::table('mix')->insert([
             'naam' => 'mixnaam',
             'kruid1' => 'zout',
-            'kruid2' => 'zout',
-            'kruid3' => 'zout',
-            'hoeveelheid1' => 10,
-            'hoeveelheid2' => 10,
-            'hoeveelheid3' => 10,
+            'kruid2' => 'peper',
+            'kruid3' => 'suiker',
+            'hoeveelheid1' => 'theelepel',
+            'hoeveelheid2' => 'theelepel',
+            'hoeveelheid3' => '1/2 theelepel',
             'omschrijving' => null,
             'gebruikersnaam' => 'mauriccio'
         ]);
         DB::table('mix')->insert([
             'naam' => 'mixnaam2',
             'kruid1' => 'zout',
-            'kruid2' => 'zout',
-            'kruid3' => 'zout',
-            'hoeveelheid1' => 5,
-            'hoeveelheid2' => 15,
-            'hoeveelheid3' => 10,
+            'kruid2' => 'suiker',
+            'kruid3' => 'suiker',
+            'hoeveelheid1' => 'theelepel',
+            'hoeveelheid2' => '1/2 theelepel',
+            'hoeveelheid3' => '1/2 theelepel',
             'omschrijving' => null,
             'gebruikersnaam' => 'wessel'
         ]);

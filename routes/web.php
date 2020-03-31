@@ -33,6 +33,13 @@ Route::delete('/mix/edit/{mix}','MixController@destroy');
 
 Route::get('/account','AccountController@show');
 
+// --------------------- mix laten maken ---------------------
+Route::patch('/mix/update/{mixNaam}', 'MixController@maken');
+Route::post('/mix/make/{mixNaam}', 'MixController@uitvoeren');
+
+// ------------------ compartiment bijhouden -----------------
+Route::get('/compartimenten', 'CompartimentController@show');
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -40,5 +47,3 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-
-

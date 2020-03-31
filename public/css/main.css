@@ -4,19 +4,18 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  
+
   body {
     font-family: 'Montserrat', sans-serif;
     font-weight: normal;
     height: 100vh;
     width: 100%;
     display: -ms-grid;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#e28126), to(#f7af6c));
-    background-image: linear-gradient(#e28126, #f7af6c);
+    background-color: #fafafa;
     background-attachment:fixed;
-    color: white;
+    color: black;
   }
-  
+
   main {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -28,14 +27,14 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  
+
   a {
-    color: white;
+    color: black;
     font-size: 1.2em;
     text-decoration: none;
     letter-spacing: 5px;
   }
-  
+
   nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -46,12 +45,12 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  
+
   nav img {
     height: 5vh;
     width: auto;
   }
-  
+
   ul {
     margin-top:8vh;
     margin-bottom:8vh;
@@ -64,32 +63,32 @@
 
     margin-left: 50vw;
   }
-  
+
   li {
     list-style: none;
   }
-  
+
   nav li a {
-    color: white;
+    color: black;
     font-weight: 300;
     font-size: 1.5em;
     text-decoration: none;
     letter-spacing: 3px;
   }
-  
+
   li:hover .nav__line {
     width: 95%;
   }
-  
+
   .active {
     font-weight: 600;
   }
-  
+
   .nav__line {
     margin-top: 5px;
     height: 2px;
     width: 0%;
-    background-color: white;
+    background-color: #fafafa;
     border-radius: 10px;
     -webkit-transition: width 0.25s;
     transition: width 0.25s;
@@ -118,7 +117,7 @@
     background-color: rgba(0, 0, 0, 0);
     list-style: none;
     border-radius: 20px;
-    border: 4px solid;
+    border: 4px solid black;
   }
   .grid_mix_item{
     width: 640px;
@@ -126,7 +125,7 @@
     background-color: rgba(0, 0, 0, 0);
     list-style: none;
     border-radius: 20px;
-    border: 4px solid;
+    border: 4px solid black;
   }
   .item_image, .item_image_mix{
     width: 150px;
@@ -153,14 +152,14 @@
     grid-template-columns: auto;
   }
 
-  input{
+  input {
     padding: 1vh;
     padding-right: 15vw;
-    color: white;
+    color: black;
     background-color: rgba(0, 0, 0, 0);
     list-style: none;
     border-radius: 8px;
-    border: 4px solid white;
+    border: 2px solid black;
   }
 
   .btn_nieuw{
@@ -221,11 +220,12 @@
     margin-top: 2vh;
   }
 
-  .btn{
+  .btn {
     font-family: 'Montserrat', sans-serif;
-    background-color: #e28126;
+    background-color: white;
     border: none;
-    color: white;
+    border: 2px solid black;
+    color: black;
     padding: 10px 28px;
     text-align: center;
     text-decoration: none;
@@ -237,6 +237,7 @@
   .btn_register{
     margin-top: 2vh;
     margin-bottom: 8vh;
+    border: 2px solid black;
   }
 
   .register{
@@ -249,14 +250,14 @@
   .compGrid{
     display:grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto; 
+    grid-template-rows: auto;
     grid-gap: 3rem;
   }
   .compCard{
     height:60vh;
     width: 35vh;
     border-radius: 23px;
-    background-color: #FFbf83;
+    background-color: #fafafa;
     box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
   }
 
@@ -268,15 +269,15 @@
   .compHeader{
     font-weight: bold;
     display:inline-block;
-    color:black;
-    font-size:24px;
+    color: black;
+    font-size: 24px;
     margin-top: 5vh;
   }
   .compSensorContainer{
     display: flex;
     justify-content: center;
     flex-direction: row;
-    width:100%; 
+    width:100%;
     margin-top:2vh;
   }
   .compSensor{
@@ -284,22 +285,50 @@
     width:22vh;
     border: 5px solid black;
     border-radius: 22px;
+    background-color: black;
   }
+
+  .comp1Fill, .comp2Fill, .comp3Fill {
+    background-color: white;
+    width: auto;
+    border-radius: 18px;
+  }
+
   .dispense{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
     margin: 0 auto;
     display: block;
-    margin-top:2vh;
+    width: 200px;
+    height: 50px;
+    margin-top: 2.5vh;
+    border: none;
+    border-radius: 20px;
+    border: 2px solid black;
+    background-color: white;
+
+  }
+
+  .makeMix {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    border: 2px solid black;
+    background-color: white;
   }
 
   @media only screen and (max-width: 600px) {
-   
+
     .card-header{
       text-align: center;
     }
     form{
       margin-left: 21vh;
     }
-  
-    
+
+
   }
   /*# sourceMappingURL=main.css.map */
