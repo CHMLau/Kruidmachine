@@ -40,9 +40,25 @@ class MixController extends Controller
         }else{
             $mix->gebruikersnaam = Auth::user()->name;
         }
-        $mix->save();
-        
-        return redirect('/mix');
+        try{
+            $mix->save();
+            return redirect('/mix');
+        }
+        catch(Exception $e){
+            return redirect('/mix');
+        }
+    }   
+
+    public function edit($mix){
+        $mixData = Mix::where('naam','=',$mix)->first();
+        // $mixData = Mix::where('naam','!=', NULL )->first();
+        return view('mix.mixEdit')->with('mix',$mixData)->with('kruid',Kruid::all());
+    }
+    
+    public function update(Request $request, $mix){
+        $mix = Mix::find($mix);
+        $mix->naam= $request->input('naam');
+        $mix->kruid1= $request->input('kruid1');
         $mix->kruid2= $request->input('kruid2');
         $mix->kruid3= $request->input('kruid3');
         $mix->hoeveelheid1= $request->input('hoeveelheid1');
@@ -63,18 +79,6 @@ class MixController extends Controller
             return redirect('/mix');
         }
     }
-
-    public function destroy($mix){
-        $mix = Mix::find($mix);
-        try{
-            $mix->delete();
-            return redirect('/mix');
-        }
-        catch(Exception $e){
-            return redirect('/mix');
-        }
-    }
-
   
 }
 
