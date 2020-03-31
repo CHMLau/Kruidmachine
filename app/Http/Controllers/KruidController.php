@@ -11,6 +11,9 @@ class KruidController extends Controller
     public function show(){
         return view('kruid.index')->with('kruid',Kruid::all());
     }
+    public function show_comp(){
+        return view('kruid.kruidComp');
+    }
 
     public function create(){
         return view('kruid.kruidPost');

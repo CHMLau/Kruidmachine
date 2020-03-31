@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/kruid','KruidController@show');
 Route::get('/kruid/nieuw','KruidController@create');
 Route::post('/kruid/nieuw','KruidController@store');
+Route::get('/kruid/comp','KruidController@show_comp');
 
 Route::get('/kruid/edit/{kruid}','KruidController@edit')->name('editkruid');
 Route::patch('/kruid/edit/{kruid}','KruidController@update');
@@ -31,6 +32,7 @@ Route::patch('/mix/edit/{mix}' , 'MixController@update');
 Route::delete('/mix/edit/{mix}','MixController@destroy');
 
 Route::get('/account','AccountController@show');
+
 
 Route::get('/', function () {
     return view('welcome');
