@@ -24,15 +24,6 @@ class KruidController extends Controller
         $kruid->kruid= $request->input('kruid');
         $kruid->save();
         return redirect('/kruid');
-    }
-
-    public function edit($kruid){
-        $kruidData = Kruid::where('kruid','=',$kruid)->first();
-        return view('kruid.kruidEdit')->with('kruid',$kruidData);
-    }
-    
-    public function update(Request $request, $kruid){
-        $kruid = Kruid::find($kruid);
         $kruid->kruid= $request->input('kruid');
 
         try{

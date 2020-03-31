@@ -134,7 +134,7 @@
     margin: 10px auto 10px auto;
   }
   .item_image_mix{
-    position: absolute;
+    position: static;
     left: 1vw;
   }
   .item_description{
@@ -154,9 +154,12 @@
   }
 
   input{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
     padding: 1vh;
     padding-right: 15vw;
-    color: white;
+    color: black;
     background-color: rgba(0, 0, 0, 0);
     list-style: none;
     border-radius: 8px;
@@ -174,6 +177,13 @@
     font-size: 2.5em;
     bottom: -18px;
     right: -40px;
+  }
+
+  label{
+    color: black;
+    font-weight: 600;
+    font-size: 1.3em;
+
   }
 
   footer {
@@ -234,6 +244,16 @@
     font-size: 1.4em;
   }
 
+  .btn_update{
+    position: relative;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    left: -10vw;
+  }
+
+  .btn_delete{
+  }
+
   .btn_register{
     margin-top: 2vh;
     margin-bottom: 8vh;
@@ -246,60 +266,24 @@
     font-size: 1.4em;
     letter-spacing: 0;
   }
-  .compGrid{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto; 
-    grid-gap: 3rem;
-  }
-  .compCard{
-    height:60vh;
-    width: 35vh;
-    border-radius: 23px;
-    background-color: #FFbf83;
-    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-  }
 
-  .compHeaderContainer{
-    width:100%;
-    display: flex;
-    justify-content: center;
-  }
-  .compHeader{
-    font-weight: bold;
-    display:inline-block;
-    color:black;
-    font-size:24px;
-    margin-top: 5vh;
-  }
-  .compSensorContainer{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    width:100%; 
-    margin-top:2vh;
-  }
-  .compSensor{
-    height:40vh;
-    width:22vh;
-    border: 5px solid black;
-    border-radius: 22px;
-  }
-  .dispense{
-    margin: 0 auto;
-    display: block;
-    margin-top:2vh;
-  }
-
-  @media only screen and (max-width: 600px) {
+  /* @media only screen and (max-width: 600px) {
    
     .card-header{
       text-align: center;
     }
+
     form{
       margin-left: 21vh;
     }
-  
+
+    .grid_mix_item{
+      width: 350px;
+      margin-left: 20vh;
+    } 
     
-  }
+    .griditem{
+
+    }
+  } */
   /*# sourceMappingURL=main.css.map */

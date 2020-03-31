@@ -42,11 +42,11 @@
 			<label for="omschrijving">Omschrijving: </label>
 			<input type="text" name="omschrijving" value="{{$mix->omschrijving}}">
 
-			<button id="button" type="submit" name="button">Update</button>
+			<button id="button" type="submit" name="button" class="btn btn_update">Update</button>
 		</form>
 		<form id="form" action="/mix/edit/{{$mix->naam}}" method="POST">
 			{{ csrf_field() }}
             {{ method_field('DELETE') }}
-			<button id="button" type="submit" name="button">Delete</button>
+			<button onclick="return confirm('Are you sure?')" id="button" type="submit" name="button" class="btn btn_delete">Delete</button>
 		</form>
 @endsection
