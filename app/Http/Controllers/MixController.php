@@ -40,9 +40,13 @@ class MixController extends Controller
         }else{
             $mix->gebruikersnaam = Auth::user()->name;
         }
-        $mix->save();
-        
-        return redirect('/mix');
+        try{
+            $mix->save();
+            return redirect('/mix');
+        }
+        catch(Exception $e){
+            return redirect('/mix');
+        }
     }   
 
     public function edit($mix){

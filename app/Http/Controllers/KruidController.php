@@ -19,8 +19,14 @@ class KruidController extends Controller
     public function store(Request $request){
         $kruid = new Kruid();
         $kruid->kruid= $request->input('kruid');
-        $kruid->save();
-        return redirect('/kruid');
+        
+        try{
+            $kruid->save();
+            return redirect('/kruid');
+        }
+        catch(Exception $e){
+            return redirect('/kruid');
+        }
     }
 
     public function edit($kruid){
