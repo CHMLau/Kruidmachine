@@ -49,21 +49,22 @@
             <button class="dispense">Dispense</button>
 
         </div>
-
     </div>
 
 </div>
 
 <style>
-@foreach($comp as $compa)
+@foreach($comp_1 as $comp_1)
   .comp1Fill {
     height: {{$comp_1->comp_volheid}}%;
   }
-
+@endforeach
+@foreach($comp_2 as $comp_2)
   .comp2Fill {
     height: {{$comp_2->comp_volheid}}%;
   }
-
+@endforeach
+@foreach($comp_3 as $comp_3)
   .comp3Fill {
     height: {{$comp_3->comp_volheid}}%;
   }
