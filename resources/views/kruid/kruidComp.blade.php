@@ -57,15 +57,15 @@
 <style>
 @foreach($comp as $compa)
   .comp1Fill {
-    height: {{$compa->comp1_volheid}}%;
+    height: {{$comp_1->comp_volheid}}%;
   }
 
   .comp2Fill {
-    height: {{$compa->comp2_volheid}}%;
+    height: {{$comp_2->comp_volheid}}%;
   }
 
   .comp3Fill {
-    height: {{$compa->comp3_volheid}}%;
+    height: {{$comp_3->comp_volheid}}%;
   }
 @endforeach
 </style>
