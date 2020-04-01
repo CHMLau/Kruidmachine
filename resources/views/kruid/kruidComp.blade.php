@@ -9,7 +9,7 @@
             <div class="compSensorContainer">
                 <div class="compSensor"></div>
             </div>
-            <button class="dispense">Dispense</button> 
+            <button class="dispense btn">Dispense</button> 
         </div>
 
     </div>
@@ -21,7 +21,7 @@
             <div class="compSensorContainer">
                 <div class="compSensor"></div>
             </div>
-            <button class="dispense">Dispense</button>
+            <button class="dispense btn">Dispense</button>
 
         </div>
         
@@ -34,7 +34,7 @@
             <div class="compSensorContainer">
                 <div class="compSensor"></div>
             </div>
-            <button class="dispense">Dispense</button>
+            <button class="dispense btn">Dispense</button>
 
         </div>
         

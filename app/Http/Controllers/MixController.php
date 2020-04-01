@@ -78,11 +78,18 @@ class MixController extends Controller
         catch(Exception $e){
             return redirect('/mix');
         }
-    }
-  
-}
 
-   
+        public function destroy($mix){
+            $mix = Kruid::find($mix);
+            try{
+                $kruid->delete();
+                return redirect('/kruid');
+            }
+            catch(Exception $e){
+                return redirect('/kruid');
+            }
+        }
+    }
 
 
 
