@@ -40,6 +40,9 @@ Route::post('/mix/make/{mixNaam}', 'MixController@uitvoeren');
 // ------------------ compartiment bijhouden -----------------
 Route::get('/compartimenten', 'CompartimentController@show');
 
+// ------------------ compartiment aanpassen -----------------
+// Route::patch('/compartimenten/edit', 'CompartimentController@update');
+
 
 Route::get('/', function () {
     return view('welcome');

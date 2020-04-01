@@ -13,17 +13,14 @@ class KruidTableSeeder extends Seeder
     {
         DB::table('kruid')->insert([
             'kruid' => 'zout',
-            'comp_nummer' => null
         ]);
 
         DB::table('kruid')->insert([
             'kruid' => 'peper',
-            'comp_nummer' => null
         ]);
 
         DB::table('kruid')->insert([
             'kruid' => 'suiker',
-            'comp_nummer' => null
         ]);
     }
 }

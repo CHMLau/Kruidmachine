@@ -12,9 +12,15 @@ class CompartimentTableSeeder extends Seeder
     public function run()
     {
         DB::table('compartiment')->insert([
-            'comp1_volheid' => 0,
-            'comp2_volheid' => 0,
-            'comp3_volheid' => 0
+          'comp_nummer' => 1
+        ]);
+
+        DB::table('compartiment')->insert([
+          'comp_nummer' => 2
+        ]);
+
+        DB::table('compartiment')->insert([
+          'comp_nummer' => 3        
         ]);
     }
 }

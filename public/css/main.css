@@ -11,7 +11,7 @@
     height: 100vh;
     width: 100%;
     display: -ms-grid;
-    background-color: #fafafa;
+    background-color: #ffddc2;
     background-attachment:fixed;
     color: black;
   }
@@ -88,7 +88,7 @@
     margin-top: 5px;
     height: 2px;
     width: 0%;
-    background-color: #fafafa;
+    background-color: black;
     border-radius: 10px;
     -webkit-transition: width 0.25s;
     transition: width 0.25s;
@@ -222,7 +222,7 @@
 
   .btn {
     font-family: 'Montserrat', sans-serif;
-    background-color: white;
+    background-color: #ffddc2;
     border: none;
     border: 2px solid black;
     color: black;

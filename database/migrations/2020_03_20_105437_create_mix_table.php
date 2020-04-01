@@ -14,7 +14,7 @@ class CreateMixTable extends Migration
     public function up()
     {
         Schema::create('mix', function (Blueprint $table) {
-            $table->string('naam');
+            $table->string('naam')-> unique();
             $table->string('kruid1')->nullable();
             $table->string('kruid2')->nullable();
             $table->string('kruid3')->nullable();
@@ -41,6 +41,9 @@ class CreateMixTable extends Migration
      */
     public function down()
     {
+        Schema::table('mix', function(Blueprint $table){
+          $table->dropForeign('mixDB_mix_foreign');
+        });
         Schema::dropIfExists('mix');
     }
 }

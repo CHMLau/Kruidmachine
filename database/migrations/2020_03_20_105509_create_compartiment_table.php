@@ -14,24 +14,12 @@ class CreateCompartimentTable extends Migration
     public function up()
     {
         Schema::create('compartiment', function (Blueprint $table) {
-            // $table->integer('comp_nummer')->unique();
-            // $table->string('kruid');
-            // $table->integer('comp_volheid');
-            // $table->boolean('state');
 
-            $table->string('comp1')->nullable();
-            $table->string('comp2')->nullable();
-            $table->string('comp3')->nullable();
-            // $table->string('comp1_kruid')->nullable();
-            // $table->string('comp2_kruid')->nullable();
-            // $table->string('comp3_kruid')->nullable();
-            $table->integer('comp1_volheid')->nullable();
-            $table->integer('comp2_volheid')->nullable();
-            $table->integer('comp3_volheid')->nullable();
+            $table->integer('comp_nummer')->unique();
+            $table->string('comp_kruid')->nullable();
+            $table->integer('comp_volheid')->default(0)->nullable();
 
-            $table->foreign('comp1')->references('kruid')->on('kruid');
-            $table->foreign('comp2')->references('kruid')->on('kruid');
-            $table->foreign('comp3')->references('kruid')->on('kruid');
+            $table->foreign('comp_kruid')->references('kruid')->on('kruid');
         });
     }
 
@@ -42,6 +30,9 @@ class CreateCompartimentTable extends Migration
      */
     public function down()
     {
+        Schema::table('compartiment', function(Blueprint $table){
+          $table->dropForeign('mixDB_compartiment_foreign');
+        });
         Schema::dropIfExists('compartiment');
     }
 }

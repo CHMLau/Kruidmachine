@@ -10,32 +10,32 @@
 			@foreach($kruid as $kruiden)
 			
 				<option value="{{$kruiden->kruid}}">{{$kruiden->kruid}}</option>
-			
+
 			@endforeach
 			</select>
-			
+
 			<select name="kruid2">
 			@foreach($kruid as $kruiden)
-			
+
 				<option value="{{$kruiden->kruid}}">{{$kruiden->kruid}}</option>
-			
+
 			@endforeach
 			</select>
-			
+
 			<select name="kruid3">
 			@foreach($kruid as $kruiden)
-			
+
 				<option value="{{$kruiden->kruid}}">{{$kruiden->kruid}}</option>
-			
+
 			@endforeach
 			</select>
-			
+
 			<label for="hoeveelheid1">Hoeveelheid 1: </label>
 			<input type="number" name="hoeveelheid1" value="{{$mix->hoeveelheid1}}">
-			
+
 			<label for="hoeveelheid2">Hoeveelheid 2: </label>
 			<input type="number" name="hoeveelheid2" value="{{$mix->hoeveelheid2}}">
-			
+
 			<label for="hoeveelheid3">Hoeveelheid 3: </label>
 			<input type="number" name="hoeveelheid3" value="{{$mix->hoeveelheid3}}">
 

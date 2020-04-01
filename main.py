@@ -20,7 +20,7 @@ port.write("c0")
 mydb.commit()
 
 while True:
-	
+
     mydb.commit()
 
     mycursor.execute("SELECT hoeveelheid1, hoeveelheid2,hoeveelheid3 FROM mix WHERE maken = 'ja';")
@@ -37,7 +37,7 @@ while True:
         if (x[0] == '1/2 theelepel'):
             port.write("c2")
             mydb.commit()
-            print("comp1: 1/2 theelepel")  
+            print("comp1: 1/2 theelepel")
             time.sleep(12)
             #hier de tijd die nodig is per compartiment ook doorsturen als we met miligrammen gaan werken
 
@@ -66,12 +66,12 @@ while True:
             mydb.commit()
             print("comp3: 1/2 theelepel")
             time.sleep(12)
-       
+
     os.system("python mix_uit.py")
     port.write("c0")
     mydb.commit()
     print("mix maken uit")
-	
+
     rcv = port.readline().strip()
 
     if (rcv == 'C1_OUT'):
