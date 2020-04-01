@@ -15,56 +15,63 @@ mycursor = mydb.cursor()
 
 port = serial.Serial("/dev/ttyUSB0", baudrate=9600, timeout=3.0)
 
-while True:
+os.system("python mix_uit.py")
+port.write("c0")
+mydb.commit()
 
-    port.write("c0")
+while True:
+	
     mydb.commit()
 
-    mycursor.execute("SELECT hoeveelheid1, hoeveelheid2, hoeveelheid3 FROM mix WHERE maken = 'ja';")
+    mycursor.execute("SELECT hoeveelheid1, hoeveelheid2,hoeveelheid3 FROM mix WHERE maken = 'ja';")
 
     for x in mycursor:
-        print("mix maken: " + x[0])
 
         if (x[0] == 'theelepel'):
             port.write("c1")
             mydb.commit()
             print("comp1: theelepel")
-            port.write("c0")
+            time.sleep(12)
 
-        elif (x[0] == '1/2 theelepel'):
+
+        if (x[0] == '1/2 theelepel'):
             port.write("c2")
-            print("comp1: 1/2 theelepel")
-            port.write("c0")
+            mydb.commit()
+            print("comp1: 1/2 theelepel")  
+            time.sleep(12)
             #hier de tijd die nodig is per compartiment ook doorsturen als we met miligrammen gaan werken
 
-        elif (x[1] == 'theelepel'):
+        if (x[1] == 'theelepel'):
             port.write("c3")
             mydb.commit()
             print("comp2: theelepel")
-            port.write("c0")
+            time.sleep(12)
 
-        elif (x[1] == '1/2 theelepel'):
+
+        if (x[1] == '1/2 theelepel'):
             port.write("c4")
+            mydb.commit()
             print("comp2: 1/2 theelepel")
-            port.write("c0")
+            time.sleep(12)
 
-        elif (x[1] == 'theelepel'):
+        if (x[2] == 'theelepel'):
             port.write("c5")
             mydb.commit()
             print("comp3: theelepel")
-            port.write("c0")
-            os.system("python mix_uit.py")
+            time.sleep(12)
 
-        elif (x[1] == '1/2 theelepel'):
+
+        if (x[2] == '1/2 theelepel'):
             port.write("c6")
+            mydb.commit()
             print("comp3: 1/2 theelepel")
-            port.write("c0")
-            os.system("python mix_uit.py")
-
-        else:
-            os.system("python mix_uit.py")
-            print("mix maken uit")
-
+            time.sleep(12)
+       
+    os.system("python mix_uit.py")
+    port.write("c0")
+    mydb.commit()
+    print("mix maken uit")
+	
     rcv = port.readline().strip()
 
     if (rcv == 'C1_OUT'):
