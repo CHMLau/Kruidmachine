@@ -9,5 +9,5 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-mycursor.execute("UPDATE compartiment SET comp1_volheid = 100;")
+mycursor.execute("UPDATE compartiment SET comp_volheid = 100 WHERE comp_nummer = 1;")
 mydb.commit()

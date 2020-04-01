@@ -23,7 +23,7 @@ while True:
 
     mydb.commit()
 
-    mycursor.execute("SELECT hoeveelheid1, hoeveelheid2,hoeveelheid3 FROM mix WHERE maken = 'ja';")
+    mycursor.execute("SELECT hoeveelheid1, hoeveelheid2, hoeveelheid3 FROM mix WHERE maken = 'ja';")
 
     for x in mycursor:
 
