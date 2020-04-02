@@ -7,7 +7,7 @@
 			<a class="gridlink"href="{{route('editkruid', $kruid)}}">
 				<div class='griditem'>
 					<p class='item_description'>{{$kruid->kruid}}</p>
-					<img class='item_image'>
+					<img class='item_image' src='/img/{{$kruid->img_path}}'>
 				</div>
 			</a>
 		@endforeach

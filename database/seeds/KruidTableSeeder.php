@@ -13,6 +13,7 @@ class KruidTableSeeder extends Seeder
     {
         DB::table('kruid')->insert([
             'kruid' => 'zout',
+            'img_path' => 'zout.png',
             'comp_nummer' => null  
         ]);
     }
