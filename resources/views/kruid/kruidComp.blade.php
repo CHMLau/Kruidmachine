@@ -13,7 +13,13 @@
                   </div>
                 </div>
             </div>
-            <button class="dispense btn">Dispense</button> 
+
+            <select name="hoeveelheid">
+				        <option value="theelepel">theelepel</option>
+                <option value="1/2 theelepel">1/2 theelepel</option>
+		      	</select>
+
+            <button class="dispense">Dispense</button> 
         </div>
 
     </div>
@@ -29,8 +35,13 @@
                   </div>
                 </div>
             </div>
-            <button class="dispense btn">Dispense</button>
 
+            <select name="hoeveelheid">
+				        <option value="theelepel">theelepel</option>
+                <option value="1/2 theelepel">1/2 theelepel</option>
+		      	</select>
+
+            <button class="dispense">Dispense</button>
         </div>
 
     </div>
@@ -46,7 +57,13 @@
                   </div>
                 </div>
             </div>
-            <button class="dispense btn">Dispense</button>
+
+            <select name="hoeveelheid">
+				        <option value="theelepel">theelepel</option>
+                <option value="1/2 theelepel">1/2 theelepel</option>
+		      	</select>
+
+            <button class="dispense">Dispense</button>
 
         </div>
     </div>

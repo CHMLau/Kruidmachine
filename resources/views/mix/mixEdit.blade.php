@@ -46,7 +46,7 @@
 		</form>
 		<form id="form" action="/mix/edit/{{$mix->naam}}" method="POST">
 			{{ csrf_field() }}
-            {{ method_field('DELETE') }}
+            {{ method_field('DELETE') }} 
 			<button onclick="return confirm('Are you sure?')" id="button" type="submit" name="button" class="btn btn_delete">Delete</button>
 		</form>
 @endsection

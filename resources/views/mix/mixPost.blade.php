@@ -28,15 +28,30 @@
 			
 			@endforeach
 			</select>
+
+			<select name="hoeveelheid1">
+				<option value="1/2 theelepel">1/2 theelepel</option>
+				<option value="theelepel">theelepel</option>
+			</select>
+
+			<select name="hoeveelheid2">
+				<option value="1/2 theelepel">1/2 theelepel</option>
+				<option value="theelepel">theelepel</option>
+			</select>
+
+			<select name="hoeveelheid3">
+				<option value="1/2 theelepel">1/2 theelepel</option>
+				<option value="theelepel">theelepel</option>
+			</select>
 			
-			<label for="hoeveelheid1">Hoeveelheid 1: </label>
+			<!-- <label for="hoeveelheid1">Hoeveelheid 1: </label>
 			<input type="number" name="hoeveelheid1" value="">
 			
 			<label for="hoeveelheid2">Hoeveelheid 2: </label>
 			<input type="number" name="hoeveelheid2" value="">
 			
 			<label for="hoeveelheid3">Hoeveelheid 3: </label>
-			<input type="number" name="hoeveelheid3" value="">
+			<input type="number" name="hoeveelheid3" value=""> -->
 
 			<label for="omschrijving">Omschrijving: </label>
 			<input type="text" name="omschrijving" value="">

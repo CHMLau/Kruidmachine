@@ -9,7 +9,7 @@ use App\Kruid;
 class KruidController extends Controller
 {
     public function show(){
-        return view('kruid.index')->with('kruid',Kruid::all());
+        return view('kruid.index')->with('kruid', Kruid::all());
     }
     public function show_comp(){
         return view('kruid.kruidComp');

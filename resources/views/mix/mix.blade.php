@@ -11,6 +11,6 @@
 			</div>
 		</a>
     @endforeach
-		<a href="{{ url('/mix/nieuw') }}" class="btn_nieuw">nieuwe mix <div class="btn_plus">+</div></a>
+		<!-- <a href="{{ url('/mix/nieuw') }}" class="btn_nieuw">nieuwe mix <div class="btn_plus">+</div></a> -->
 	</div>
 @endsection

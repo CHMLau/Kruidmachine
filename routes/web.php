@@ -39,8 +39,13 @@ Route::delete('/mix/edit/{mix}','MixController@destroy');
 Route::get('/account','AccountController@show');
 
 // --------------------- mix laten maken ---------------------
-Route::patch('/mix/update/{mixNaam}', 'MixController@maken');
-Route::post('/mix/make/{mixNaam}', 'MixController@uitvoeren');
+Route::patch('/mix/update/{mixNaam}', 'MixController@uitvoeren')->name('maakmix');
+
+Route::get('/mix/check/{mixNaam}', 'MixController@check')->name('checkmix');
+
+Route::get('/mix/uitvoeren/{mixNaam}', 'MixController@checkgoed')->name('checkgoed');
+
+// Route::post('/mix/make/{mixNaam}', 'MixController@uitvoeren');
 
 // ------------------ compartiment bijhouden -----------------
 Route::get('/compartimenten', 'CompartimentController@show');
