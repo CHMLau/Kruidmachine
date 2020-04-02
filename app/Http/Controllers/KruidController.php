@@ -19,11 +19,38 @@ class KruidController extends Controller
         return view('kruid.kruidPost');
     }
     
-    public function store(Request $request){
-        $kruid = new Kruid();
-        $kruid->kruid= $request->input('kruid');
-        $kruid->save();
-        return redirect('/kruid');
+        public function store(Request $request){
+            if ($request->file('image') == null) {
+                $file = "";
+            }else{
+                $file = $request->file('image');
+                $extension = $file->getClientOriginalExtension();
+                $fileName = $request->input('kruid').'.'.$extension;
+                $path = public_path().'/img';
+                $upload = $file->move($path,$fileName);
+            }
+
+            $kruid = new Kruid();
+            $kruid->kruid= $request->input('kruid');
+            $kruid->img_path = $fileName;
+            
+
+                // $extension = $file->getClientOriginalExtension(); // you can also use file name
+                // $fileName = $kruid->kruid= $request->input('kruid').'.png';
+                // $path = public_path().'/img';
+                // $upload = $file->move($path,$fileName);
+                // Storage::disk('public')->put($fileName, $file);
+                // return $fileName;
+                
+            
+
+        try{
+            $kruid->save();
+            return redirect('/kruid');
+        }
+        catch(Exception $e){
+            return redirect('/kruid');
+        }
     }
 
     public function edit($kruid){

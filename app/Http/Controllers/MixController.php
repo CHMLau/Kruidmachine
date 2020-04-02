@@ -40,10 +40,15 @@ class MixController extends Controller
         }else{
             $mix->gebruikersnaam = Auth::user()->name;
         }
-        $mix->save();
-
-        return redirect('/mix');
-    }
+        
+        try{
+            $mix->save();
+            return redirect('/mix');
+        }
+        catch(Exception $e){
+            return redirect('/mix');
+        }
+    }   
 
     public function edit($mix){
         $mixData = Mix::where('naam','=',$mix)->first();
@@ -74,16 +79,16 @@ class MixController extends Controller
         catch(Exception $e){
             return redirect('/mix');
         }
-    }
 
-    public function destroy($mix){
-        $mix = Mix::find($mix);
-        try{
-            $mix->delete();
-            return redirect('/mix');
-        }
-        catch(Exception $e){
-            return redirect('/mix');
+        public function destroy($mix){
+            $mix = Kruid::find($mix);
+            try{
+                $kruid->delete();
+                return redirect('/kruid');
+            }
+            catch(Exception $e){
+                return redirect('/kruid');
+            }
         }
     }
 

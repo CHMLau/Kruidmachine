@@ -133,7 +133,7 @@
     margin: 10px auto 10px auto;
   }
   .item_image_mix{
-    position: absolute;
+    position: static;
     left: 1vw;
   }
   .item_description{
@@ -152,7 +152,10 @@
     grid-template-columns: auto;
   }
 
-  input {
+  input{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
     padding: 1vh;
     padding-right: 15vw;
     color: black;
@@ -173,6 +176,13 @@
     font-size: 2.5em;
     bottom: -18px;
     right: -40px;
+  }
+
+  label{
+    color: black;
+    font-weight: 600;
+    font-size: 1.3em;
+
   }
 
   footer {
@@ -232,6 +242,16 @@
     border-radius: 8px;
     font-weight: 500;
     font-size: 1.4em;
+  }
+
+  .btn_update{
+    position: relative;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    left: -10vw;
+  }
+
+  .btn_delete{
   }
 
   .btn_register{
@@ -320,15 +340,23 @@
     background-color: #f5d1b5;
   }
 
-  @media only screen and (max-width: 600px) {
-
+  /* @media only screen and (max-width: 600px) {
+   
     .card-header{
       text-align: center;
     }
+
     form{
       margin-left: 21vh;
     }
 
+    .grid_mix_item{
+      width: 350px;
+      margin-left: 20vh;
+    } 
+    
+    .griditem{
 
-  }
+    }
+  } */
   /*# sourceMappingURL=main.css.map */

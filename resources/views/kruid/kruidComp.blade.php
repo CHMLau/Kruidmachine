@@ -13,7 +13,7 @@
                   </div>
                 </div>
             </div>
-            <button class="dispense">Dispense</button>
+            <button class="dispense btn">Dispense</button> 
         </div>
 
     </div>
@@ -29,7 +29,7 @@
                   </div>
                 </div>
             </div>
-            <button class="dispense">Dispense</button>
+            <button class="dispense btn">Dispense</button>
 
         </div>
 
@@ -46,7 +46,7 @@
                   </div>
                 </div>
             </div>
-            <button class="dispense">Dispense</button>
+            <button class="dispense btn">Dispense</button>
 
         </div>
     </div>
