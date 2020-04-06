@@ -5,11 +5,15 @@ namespace App\Http\Controllers;
 use DB;
 use Illuminate\Http\Request;
 use App\Kruid;
+use Auth;
 
 class KruidController extends Controller
 {
     public function show(){
-        return view('kruid.index')->with('kruid', Kruid::all());
+        if((Auth::user()) == NULL){
+            return view('kruid.index')->with('kruid', Kruid::all());
+        }
+        return view('kruid.index2')->with('kruid', Kruid::all());
     }
     public function show_comp(){
         return view('kruid.kruidComp');

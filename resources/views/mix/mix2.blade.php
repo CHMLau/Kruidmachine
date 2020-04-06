@@ -1,4 +1,4 @@
-@extends('mix.layout')
+@extends('mix.layoutingelogd')
 @section('content')
 	<div class="grid_mix_container">
     @foreach($mix as $mix)
@@ -18,6 +18,6 @@
 		</form>
 
   	@endforeach
-	  <a href="{{ url('/mix/nieuw') }}" class="btn_nieuw">nieuwe mix <div class="btn_plus">+</div></a> 
+	  <a href="{{ url('/mix/nieuw') }}" class="btn_nieuw">new mix <div class="btn_plus">+</div></a> 
 	</div>
 @endsection

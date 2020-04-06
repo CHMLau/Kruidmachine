@@ -5,32 +5,35 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type='text/css' href="{{ URL::asset('css/main.css') }}"/>
-	<title>Spice </title>
+	<title>MIX</title>
 </head>
 	<body>
-		<nav id="layout_nav">
-			<a id ="logo" href="">
-				<!-- <img src="{{ asset('img/logo.png') }}" alt=""> -->
+		<nav>
+			<a href="">
+				<!-- <img src="{{URL::asset('img/logo.png') }}" alt=""> -->
 				<img src="../../../img/logoBlack.png" title="source: imgur.com" />
 			</a>
 			<ul>
 				<li>
-					<a href="{{ url('/')}}">home</a>
+					<a href="{{url ('/') }}">home</a>
 					<div class="nav__line"></div>
 				</li>
 				<div class="streepje">_</div>
 				<li>
-					<a class="active" href="{{url ('/kruid') }}">spices</a>
+					<a href="{{url ('/kruid') }}">spices</a>
+					<div class="nav__line"></div>
+				</li>
+				<div class="streepje">_</div>
+				<li>
+					<a class="active" href="{{ url('/mix')}}">mixes</a>
 					<!-- <div class="nav__line"></div> -->
 				</li>
 				<div class="streepje">_</div>
 				<li>
-					<a href="{{ url('/mix')}}">mixes</a>
-					<div class="nav__line"></div>
-				</li>
-				<div class="streepje">_</div>
-				<li>
-					<a href="{{ url('/login')}}">login</a>
+					<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+					<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
 					<div class="nav__line"></div>
 				</li>
 			</ul>
@@ -40,4 +43,4 @@
 			@yield('content')
 		</main>
 	</body>
-</meta>
+</head>

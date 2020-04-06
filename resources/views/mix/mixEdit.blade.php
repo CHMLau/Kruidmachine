@@ -1,12 +1,12 @@
-@extends('mix.layout')
+@extends('mix.layoutingelogd')
 @section('content')
 		<form id="form" action="/mix/edit/{{$mix->naam}}" method="POST">
 			{{ csrf_field() }}
             {{ method_field('PATCH') }}
-			<label for="naam">Naam: </label>
+			<label for="naam">Name: </label>
 			<input type="text" name="naam" value="{{$mix->naam}}">
 
-			<select name="kruid1">
+			<select name="Spice 1">
 			@foreach($kruid as $kruiden)
 			
 				<option value="{{$kruiden->kruid}}">{{$kruiden->kruid}}</option>
@@ -14,7 +14,7 @@
 			@endforeach
 			</select>
 
-			<select name="kruid2">
+			<select name="Spice 2">
 			@foreach($kruid as $kruiden)
 
 				<option value="{{$kruiden->kruid}}">{{$kruiden->kruid}}</option>
@@ -22,7 +22,7 @@
 			@endforeach
 			</select>
 
-			<select name="kruid3">
+			<select name="Spice 3">
 			@foreach($kruid as $kruiden)
 
 				<option value="{{$kruiden->kruid}}">{{$kruiden->kruid}}</option>
@@ -30,23 +30,31 @@
 			@endforeach
 			</select>
 
-			<select name="hoeveelheid1">
-				<option value="1/2 theelepel">1/2 theelepel</option>
-				<option value="theelepel">theelepel</option>
+			<select name="Quantity Spice 1">
+				<option value="1/2 Teaspoon">1/2 Teaspoon</option>
+				<option value="Teaspoon">Teaspoon</option>
+				<option value=" 1.5 Teaspoon">1.5 Teaspoon</option>
+				<option value="2 Teaspoon">2 Teaspoon</option>
 			</select>
 
-			<select name="hoeveelheid2">
-				<option value="1/2 theelepel">1/2 theelepel</option>
-				<option value="theelepel">theelepel</option>
+			<select name="Quantity Spice 2">
+				<option value=""></option>
+				<option value="1/2 Teaspoon">1/2 theelepel</option>
+				<option value="Teaspoon"> Teaspoon</option>
+				<option value=" 1.5 Teaspoon">1.5 Teaspoon</option>
+				<option value="2 Teaspoon">2 Teaspoon</option>
 			</select>
 
-			<select name="hoeveelheid3">
-				<option value="1/2 theelepel">1/2 theelepel</option>
-				<option value="theelepel">theelepel</option>
+			<select name="Quantity Spice 3">
+				<option value=""></option>
+				<option value="1/2 Teaspoon">1/2 Teaspoon</option>
+				<option value="Teaspoon"> Teaspoon</option>
+				<option value=" 1.5 Teaspoon">1.5 Teaspoon</option>
+				<option value="2 Teaspoon">2 Teaspoon</option>
 			</select>
 
-			<label for="omschrijving">Omschrijving: </label>
-			<input type="text" name="omschrijving" value="{{$mix->omschrijving}}">
+			<label for="Description">Description: </label>
+			<input type="text" name="Description" value="{{$mix->omschrijving}}">
 
 			<button id="button" type="submit" name="button" class="btn btn_update">Update</button>
 		</form>

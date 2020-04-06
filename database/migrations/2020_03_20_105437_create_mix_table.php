@@ -15,10 +15,10 @@ class CreateMixTable extends Migration
     {
         Schema::create('mix', function (Blueprint $table) {
             $table->string('naam')-> unique();
-            $table->string('kruid1')->nullable();
+            $table->string('kruid1');
             $table->string('kruid2')->nullable();
             $table->string('kruid3')->nullable();
-            $table->string('hoeveelheid1')->nullable();
+            $table->string('hoeveelheid1');
             $table->string('hoeveelheid2')->nullable();
             $table->string('hoeveelheid3')->nullable();
             $table->string('omschrijving')->nullable();

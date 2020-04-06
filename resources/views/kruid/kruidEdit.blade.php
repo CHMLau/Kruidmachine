@@ -1,4 +1,4 @@
-@extends('kruid.layout')
+@extends('kruid.layoutingelogd')
 @section('content')
 		<form id="form" action="{{action('KruidController@update', $kruid['kruid'])}}" method="POST">
 			{{ csrf_field() }}

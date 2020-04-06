@@ -385,9 +385,9 @@
     width: 30vw;
   }
 
-  /* @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
    
-    .card-header{
+    /*.card-header{
       text-align: center;
     }
 
@@ -402,6 +402,48 @@
     
     .griditem{
 
+    }*/
+    #logo{
+      position: absolute;
+      top:3.5vh;
     }
-  } */
-  /*# sourceMappingURL=main.css.map */
+    ul{
+      font-size: 0.9em;
+      margin-top:10vh;
+      margin-bottom:0vh;
+      width: 80%;
+      margin-left: 0vw;
+    }
+  
+    nav li a {  
+      letter-spacing: 1px;
+    }
+    .card{
+      text-align: center;
+      margin-top: 8vh;
+      
+    }
+    .card-body{
+      margin-top: 3vh;
+    }
+    .form-check-label{
+      font-size: 0.9em;
+      
+    }
+    .btn-link{
+      font-size: 0.9em;
+      margin-left: 0vw;
+    }
+    #account_forgotdiv,#account_rememberdiv{
+      display: inline-block;
+      width: 35vw;
+      text-align: center;
+    }
+    #account_rememberdiv{
+      vertical-align: top;
+    }
+    #account_resetbutton{
+      font-size: 1em;
+    }
+  } 
+
