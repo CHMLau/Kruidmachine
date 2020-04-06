@@ -5,41 +5,47 @@
 			<label for="naam">Naam: </label>
 			<input type="text" name="naam" value="">
 
+			<label for="kruid1">Kruid1: </label>
 			<select name="kruid1">
+			<option selected disabled>Kies een kruid</option>
 			@foreach($kruid as $kruiden)
-			
-				<option value="{{$kruiden->kruid}}">{{$kruiden->kruid}}</option>
-			
+				<option value="{{$kruiden->kruid}}">{{$kruiden->kruid}}</option>			
 			@endforeach
 			</select>
 			
+			<label for="kruid2">Kruid2: </label>
 			<select name="kruid2">
+			<option selected disabled>Kies een kruid</option>
 			@foreach($kruid as $kruiden)
-			
 				<option value="{{$kruiden->kruid}}">{{$kruiden->kruid}}</option>
-			
 			@endforeach
 			</select>
 			
+			<label for="kruid3">Kruid3: </label>
 			<select name="kruid3">
-			@foreach($kruid as $kruiden)
-			
-				<option value="{{$kruiden->kruid}}">{{$kruiden->kruid}}</option>
-			
+			<option selected disabled>Kies een kruid</option>
+			@foreach($kruid as $kruiden)	
+				<option value="{{$kruiden->kruid}}">{{$kruiden->kruid}}</option>		
 			@endforeach
 			</select>
 
+			<label for="Hoeveelheid1">Hoeveelheid1: </label>
 			<select name="hoeveelheid1">
+			<option selected disabled>Kies een hoeveelheid</option>
 				<option value="1/2 theelepel">1/2 theelepel</option>
 				<option value="theelepel">theelepel</option>
 			</select>
 
+			<label for="hoeveelheid2">Hoeveelheid2: </label>
 			<select name="hoeveelheid2">
+				<option selected disabled>Kies een hoeveelheid</option>
 				<option value="1/2 theelepel">1/2 theelepel</option>
 				<option value="theelepel">theelepel</option>
 			</select>
 
+			<label for="hoeveelheid3">Hoeveelheid3: </label>
 			<select name="hoeveelheid3">
+				<option selected disabled>Kies een hoeveelheid</option>
 				<option value="1/2 theelepel">1/2 theelepel</option>
 				<option value="theelepel">theelepel</option>
 			</select>
@@ -55,6 +61,6 @@
 
 			<label for="omschrijving">Omschrijving: </label>
 			<input type="text" name="omschrijving" value="">
-			<button id="button" type="submit" name="button">Post</button>
+			<button id="button" type="submit" name="button" class="btn">Post</button>
 		</form>
 @endsection

@@ -30,14 +30,20 @@
 			@endforeach
 			</select>
 
-			<label for="hoeveelheid1">Hoeveelheid 1: </label>
-			<input type="number" name="hoeveelheid1" value="{{$mix->hoeveelheid1}}">
+			<select name="hoeveelheid1">
+				<option value="1/2 theelepel">1/2 theelepel</option>
+				<option value="theelepel">theelepel</option>
+			</select>
 
-			<label for="hoeveelheid2">Hoeveelheid 2: </label>
-			<input type="number" name="hoeveelheid2" value="{{$mix->hoeveelheid2}}">
+			<select name="hoeveelheid2">
+				<option value="1/2 theelepel">1/2 theelepel</option>
+				<option value="theelepel">theelepel</option>
+			</select>
 
-			<label for="hoeveelheid3">Hoeveelheid 3: </label>
-			<input type="number" name="hoeveelheid3" value="{{$mix->hoeveelheid3}}">
+			<select name="hoeveelheid3">
+				<option value="1/2 theelepel">1/2 theelepel</option>
+				<option value="theelepel">theelepel</option>
+			</select>
 
 			<label for="omschrijving">Omschrijving: </label>
 			<input type="text" name="omschrijving" value="{{$mix->omschrijving}}">
