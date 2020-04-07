@@ -15,8 +15,8 @@
             </div>
 
             <select name="hoeveelheid">
-				        <option value="theelepel">theelepel</option>
-                <option value="1/2 theelepel">1/2 theelepel</option>
+				        <option value="theelepel">Theelepel</option>
+                <option value="1/2 theelepel">1/2 Theelepel</option>
 		      	</select>
 
             <button class="dispense">Dispense</button> 
@@ -37,8 +37,8 @@
             </div>
 
             <select name="hoeveelheid">
-				        <option value="theelepel">theelepel</option>
-                <option value="1/2 theelepel">1/2 theelepel</option>
+				        <option value="theelepel">Theelepel</option>
+                <option value="1/2 theelepel">1/2 Theelepel</option>
 		      	</select>
 
             <button class="dispense">Dispense</button>
@@ -59,8 +59,8 @@
             </div>
 
             <select name="hoeveelheid">
-				        <option value="theelepel">theelepel</option>
-                <option value="1/2 theelepel">1/2 theelepel</option>
+				        <option value="theelepel">Theelepel</option>
+                <option value="1/2 theelepel">1/2 Theelepel</option>
 		      	</select>
 
             <button class="dispense">Dispense</button>
@@ -70,22 +70,22 @@
 
 </div>
 
-<style>
-@foreach($comp_1 as $comp_1)
-  .comp1Fill {
-    height: {{$comp_1->comp_volheid}}%;
-  }
-@endforeach
-@foreach($comp_2 as $comp_2)
-  .comp2Fill {
-    height: {{$comp_2->comp_volheid}}%;
-  }
-@endforeach
-@foreach($comp_3 as $comp_3)
-  .comp3Fill {
-    height: {{$comp_3->comp_volheid}}%;
-  }
-@endforeach
-</style>
+{{-- <style>
+  @foreach($comp_1 as $comp_1)
+    .comp1Fill {
+      height: {{$comp_1->comp_volheid}}%;
+    }
+  @endforeach
+  @foreach($comp_2 as $comp_2)
+    .comp2Fill {
+      height: {{$comp_2->comp_volheid}}%;
+    }
+  @endforeach
+  @foreach($comp_3 as $comp_3)
+    .comp3Fill {
+      height: {{$comp_3->comp_volheid}}%;
+    }
+  @endforeach
+</style> --}}
 
 @endsection

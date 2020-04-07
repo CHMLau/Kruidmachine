@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type='text/css' href="{{ URL::asset('css/main.css') }}"/>
+	<script src="{{ URL::asset('js/main.js') }}" defer></script>
 	<title>Home </title>
 </head>
 	<body>

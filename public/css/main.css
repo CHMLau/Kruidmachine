@@ -127,6 +127,10 @@
     border-radius: 20px;
     border: 4px solid black;
   }
+
+  .griditem, h2{
+    margin-top: 1vh;
+  }
   .item_image, .item_image_mix{
     width: 150px;
     height: 140px;
@@ -286,7 +290,7 @@
     grid-gap: 3rem;
   }
   .compCard{
-    height:60vh;
+    height:70vh;
     width: 35vh;
     border-radius: 23px;
     background-color: #f5d1b5;
@@ -320,20 +324,35 @@
     background-color: black;
   }
 
+  .compSpice{
+    margin-top:10px;
+
+  }
+  .compHoeveelheid{
+    margin-top:5px;
+    
+  }
+  .compSelect{
+    width:200px;
+    display:block;
+  	margin:1vh auto;
+  }
+
   .comp1Fill, .comp2Fill, .comp3Fill {
     background-color: #f5d1b5;
     width: auto;
     border-radius: 18px;
   }
+  
 
-  .dispense{
+  .update_kruid {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     margin: 0 auto;
     display: block;
     width: 200px;
     height: 50px;
-    margin-top: 2.5vh;
+    margin-top: 2vh;
     border: none;
     border-radius: 20px;
     border: 2px solid black;
@@ -403,32 +422,37 @@
     .griditem{
 
     }*/
+    
     #logo{
       position: absolute;
       top:3.5vh;
     }
-    ul{
-      font-size: 0.9em;
-      margin-top:10vh;
-      margin-bottom:0vh;
-      width: 80%;
-      margin-left: 0vw;
+    #layout_nav{
+      width: 100vw;
+      height: 200px;
     }
-  
-    nav li a {  
+    ul{
+      font-size: 3.8vw;
+      width: 350px;
+      height: 30px;
+      margin: 10vh 0;
+    }
+    nav{
+      width: 480px;
+      margin: 0 auto;
+      margin-bottom: -40px;
+    }
+    
+    nav li a {
       letter-spacing: 1px;
     }
     .card{
       text-align: center;
-      margin-top: 8vh;
-      
+      margin-top: 0vh;
     }
-    .card-body{
-      margin-top: 3vh;
-    }
+    
     .form-check-label{
       font-size: 0.9em;
-      
     }
     .btn-link{
       font-size: 0.9em;
@@ -444,6 +468,62 @@
     }
     #account_resetbutton{
       font-size: 1em;
+    }
+
+    .gridcontainer{
+      display: inline-grid;
+      grid-row-gap: 10px;
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+      grid-template-columns: auto auto;
+      margin: 0 auto; 
+    }
+    .grid_mix_container{
+      margin: 0 auto; 
+      grid-row-gap: 10px;
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+    }
+    .griditem, h1{
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .griditem, h2{
+      font-size: 16px;
+  
+    }
+    .griditem, .grid_mix_item{
+      width: 40vw;
+      height: 20vh;
+      border-radius: 20px;
+      border: 4px solid black;
+    }
+    .grid_mix_item{
+      width: 300px;
+    }
+    .item_image, .item_image_mix{
+      width: 25vw;
+      height: 10vh;
+    }
+    .item_description{
+      font-size: 1.4em;
+    }
+    .streepje{
+      margin-right: 4px;
+      margin-left: 4px;
+    }
+  
+    .btn_nieuw{
+      bottom: 10vh;
+      right: 50px;
+      font-size: 1em;
+    }
+  
+    .btn_plus{
+      font-size: 2em;
+      bottom: -9px;
+      right: -30px;
     }
   } 
 

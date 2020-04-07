@@ -21,6 +21,9 @@ Route::post('/kruid/nieuw','KruidController@store');
 
 Route::get('/kruid/comp','KruidController@show_comp');
 
+Route::get('/kruid/kruid_update_comp1/{compartiment}', 'CompartimentController@comp1')->name('editComp1');
+Route::patch('/kruid/kruid_update_comp1/{compartiment}', 'CompartimentController@update_comp1');
+
 // ---------------------- kruid bewerken ---------------------
 Route::get('/kruid/edit/{kruid}','KruidController@edit')->name('editkruid');
 Route::patch('/kruid/edit/{kruid}','KruidController@update');
@@ -53,9 +56,7 @@ Route::get('/compartimenten', 'CompartimentController@show');
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','CompartimentController@show');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
