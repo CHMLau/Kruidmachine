@@ -6,6 +6,7 @@
 <form method="post" action="/kruid/kruid_update_comp1/{{$compartiment->comp_nummer}}">
     {{csrf_field()}}
     @method('patch')
+        <h1>Compartiment {{$compartiment->comp_nummer}}</h1>
         <select class="compSelect compSpice" name="kruid">
             @foreach($kruid as $kruid)
                 <option value="{{$kruid->kruid}}">{{$kruid->kruid}}</option>	

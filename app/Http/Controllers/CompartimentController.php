@@ -24,7 +24,7 @@ class CompartimentController extends Controller
   }
 
   public function update_comp1(Request $request, $compartiment) {
-    $compartiment = Compartiment::where('comp_nummer', 1)->first();
+    $compartiment = Compartiment::where('comp_nummer', $compartiment)->first();
     
     $compartiment->comp_kruid = $request->input('kruid');
 

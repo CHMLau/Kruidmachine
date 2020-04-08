@@ -1,6 +1,7 @@
 @extends('mix.layoutingelogd')
 @section('content')
-		<form id="form" action="/mix/edit/{{$mix->naam}}" method="POST">
+	<div>
+		<form id="mix_editform" action="/mix/edit/{{$mix->naam}}" method="POST">
 			{{ csrf_field() }}
             {{ method_field('PATCH') }}
 			<label for="naam">Name: </label>
@@ -31,6 +32,7 @@
 			</select>
 
 			<select name="Quantity Spice 1">
+				<option value="">none</option>
 				<option value="1/2 Teaspoon">1/2 Teaspoon</option>
 				<option value="Teaspoon">Teaspoon</option>
 				<option value=" 1.5 Teaspoon">1.5 Teaspoon</option>
@@ -38,7 +40,7 @@
 			</select>
 
 			<select name="Quantity Spice 2">
-				<option value=""></option>
+				<option value="">none</option>
 				<option value="1/2 Teaspoon">1/2 theelepel</option>
 				<option value="Teaspoon"> Teaspoon</option>
 				<option value=" 1.5 Teaspoon">1.5 Teaspoon</option>
@@ -46,7 +48,7 @@
 			</select>
 
 			<select name="Quantity Spice 3">
-				<option value=""></option>
+				<option value="">none</option>
 				<option value="1/2 Teaspoon">1/2 Teaspoon</option>
 				<option value="Teaspoon"> Teaspoon</option>
 				<option value=" 1.5 Teaspoon">1.5 Teaspoon</option>
@@ -57,10 +59,14 @@
 			<input type="text" name="Description" value="{{$mix->omschrijving}}">
 
 			<button id="button" type="submit" name="button" class="btn btn_update">Update</button>
+			
 		</form>
-		<form id="form" action="/mix/edit/{{$mix->naam}}" method="POST">
+	
+		<form id="form_delete"action="/mix/edit/{{$mix->naam}}" method="POST">
 			{{ csrf_field() }}
-            {{ method_field('DELETE') }} 
-			<button onclick="return confirm('Are you sure?')" id="button" type="submit" name="button" class="btn btn_delete">Delete</button>
+			{{ method_field('DELETE') }} 
+			<button onclick="return confirm('Are you sure?')" type="submit" name="button" class="btn btn_delete">Delete</button>
 		</form>
+	</div>
+	
 @endsection

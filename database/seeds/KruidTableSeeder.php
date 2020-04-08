@@ -19,13 +19,13 @@ class KruidTableSeeder extends Seeder
 
         DB::table('kruid')->insert([
             'kruid' => 'peper',
-            'img_path' => 'zout.png',
+            'img_path' => 'black.png',
             'comp_nummer' => 2  
         ]);
 
         DB::table('kruid')->insert([
             'kruid' => 'suiker',
-            'img_path' => 'zout.png',
+            'img_path' => 'bassilicum.png',
             'comp_nummer' => 3  
         ]);
     }

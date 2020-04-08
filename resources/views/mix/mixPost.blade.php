@@ -1,6 +1,6 @@
 @extends('mix.layoutingelogd')
 @section('content')
-		<form id="form" action="/mix/nieuw" method="POST">
+		<form id="mix_editform" action="/mix/nieuw" method="POST">
 			{{ csrf_field() }}
 			<label for="naam">Name: </label>
 			<input type="text" name="naam" value="">

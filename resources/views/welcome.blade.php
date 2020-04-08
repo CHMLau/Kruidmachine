@@ -4,29 +4,78 @@
     <div class="compCard">
         <div class="compContent">
             <div class="compHeaderContainer">
-            <div class="compHeader">Comp 1</div>
-        </div>
+                <div class="compHeader">Comp 1</div>
+            </div>
             <div class="compSensorContainer">
                 <div class="compSensor">
-                  <div class="comp1Fill">
+                    <div class="comp1Fill">
 
-                  </div>
+                    </div>
                 </div>
             </div>
 
             @foreach($comp_1 as $comp)
-                <h1>{{$comp->comp_kruid}}</h1>
+                <h1 class="compSelect">{{ $comp->comp_kruid }}</h1>
             @endforeach
 
             @foreach($comp_1 as $compartiment)
-               <a class="update_kruid" href="{{url('/kruid/kruid_update_comp1/'. $compartiment->comp_nummer) }}">Update</a>
-                
-            @endforeach
-    </div>
+                <a class="update_kruid"
+                    href="{{ url('/kruid/kruid_update_comp1/'. $compartiment->comp_nummer) }}">Update</a>
 
+            @endforeach
+        </div>
+    </div>
+    <div class="compCard">
+        <div class="compContent">
+            <div class="compHeaderContainer">
+                <div class="compHeader">Comp 2</div>
+            </div>
+            <div class="compSensorContainer">
+                <div class="compSensor">
+                    <div class="comp1Fill">
+
+                    </div>
+                </div>
+            </div>
+
+            @foreach($comp_2 as $comp)
+                <h1 class="compSelect">{{ $comp->comp_kruid }}</h1>
+            @endforeach
+
+            @foreach($comp_2 as $compartiment)
+                <a class="update_kruid"
+                    href="{{ url('/kruid/kruid_update_comp1/'. $compartiment->comp_nummer) }}">Update</a>
+
+            @endforeach
+        </div>
+
+    </div>
+    <div class="compCard">
+        <div class="compContent">
+            <div class="compHeaderContainer">
+                <div class="compHeader">Comp 3</div>
+            </div>
+            <div class="compSensorContainer">
+                <div class="compSensor">
+                    <div class="comp1Fill">
+
+                    </div>
+                </div>
+            </div>
+
+            @foreach($comp_3 as $comp)
+                <h1 class="compSelect">{{ $comp->comp_kruid }}</h1>
+            @endforeach
+
+            @foreach($comp_3 as $compartiment)
+                <a class="update_kruid"
+                    href="{{ url('/kruid/kruid_update_comp1/'. $compartiment->comp_nummer) }}">Update</a>
+
+            @endforeach
+        </div>
 </div>
 
-<style>
+        <style>
   @foreach($comp_1 as $comp_1)
     .comp1Fill {
       height: {{$comp_1->comp_volheid}}%;

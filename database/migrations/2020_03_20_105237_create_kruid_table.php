@@ -15,7 +15,7 @@ class CreateKruidTable extends Migration
     {
         Schema::create('kruid', function (Blueprint $table) {
             $table->string('kruid')->unique();
-            $table->string('img_path')->nullable();
+            $table->string('img_path')->default('../img/logoBlack.png')->nullable();
             $table->integer('comp_nummer')->nullable();
             //$table->foreign('comp_nummer')->references('comp_nummer')->on('compartiment');
         });

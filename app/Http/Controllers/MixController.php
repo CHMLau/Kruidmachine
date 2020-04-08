@@ -19,7 +19,9 @@ class MixController extends Controller
         if((Auth::user()) == NULL){
             return view('mix.mix')->with('mix',Mix::all());
         }
-        return view('mix.mix2')->with('mix', Mix::where('gebruikersnaam','=', Auth::user()->name)->get());
+
+        return view('mix.mix2')->with('mix', Mix::where('gebruikersnaam','=', Auth::user()->name)->get())
+        ->with('gebruiker', auth()->user()->get('name'));
     }
 
     public function create(){
@@ -53,7 +55,6 @@ class MixController extends Controller
 
     public function edit($mix){
         $mixData = Mix::where('naam','=',$mix)->first();
-        // $mixData = Mix::where('naam','!=', NULL )->first();
         return view('mix.mixEdit')->with('mix',$mixData)->with('kruid',Kruid::all());
     }
 
@@ -87,7 +88,7 @@ class MixController extends Controller
         $mix = Mix::find($mix);
         try{
             $mix->delete();
-            return redirect('/kruid');
+            return redirect('/mix');
         }
         catch(Exception $e){
             return redirect('/kruid');

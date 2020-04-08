@@ -26,6 +26,7 @@ class KruidController extends Controller
         public function store(Request $request){
             if ($request->file('image') == null) {
                 $file = "";
+                $fileName = "../img/logoBlack.png";
             }else{
                 $file = $request->file('image');
                 $extension = $file->getClientOriginalExtension();
