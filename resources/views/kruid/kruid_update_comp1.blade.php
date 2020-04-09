@@ -1,7 +1,7 @@
 @extends('layouts.home')
 @section('content')
 
-
+<a href="{{ url()->previous() }}" class="backButton">&#10094; back</a>	
 
 <form method="post" action="/kruid/kruid_update_comp1/{{$compartiment->comp_nummer}}">
     {{csrf_field()}}

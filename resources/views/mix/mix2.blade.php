@@ -1,5 +1,8 @@
 @extends('mix.layoutingelogd')
 @section('content')
+		@if (session('error'))
+			<div class="error">{{ session('error') }}</div>
+		@endif
 	<div class="grid_mix_container">
     @foreach($mix as $mix)
 		<!-- <a href="{{route('editmix', $mix->naam)}}"> <h1>{{$mix->naam}}</h1></a> -->

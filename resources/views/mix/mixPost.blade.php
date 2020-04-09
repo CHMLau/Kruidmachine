@@ -1,5 +1,11 @@
 @extends('mix.layoutingelogd')
 @section('content')
+		@if (session('error'))
+			<div class="error">{{ session('error') }}</div>
+		@endif
+
+		<a href="{{ url()->previous() }}" class="backButton">&#10094; back</a>	
+
 		<form id="mix_editform" action="/mix/nieuw" method="POST">
 			{{ csrf_field() }}
 			<label for="naam">Name: </label>
@@ -69,6 +75,6 @@
 
 			<label for="omschrijving">Description: </label>
 			<input type="text" name="omschrijving" value="">
-			<button id="button" type="submit" name="button" class="btn">Post</button>
+			<button id="button" type="submit" name="button" class="btn btnMix">Post</button>
 		</form>
 @endsection

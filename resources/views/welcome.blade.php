@@ -1,5 +1,9 @@
 @extends('layouts.home')
 @section('content')
+
+    <img src="../../../img/textuitleg.png" id="uitleg_1" class="uitleg" title="uitleg enzo" />
+    <img src="../../../img/buttonuitleg.png" id="uitleg_2" class="uitleg" title="uitleg enzo" />
+
 <div class="compGrid">
     <div class="compCard">
         <div class="compContent">
@@ -75,7 +79,9 @@
         </div>
 </div>
 
-        <style>
+<a class="infoButton">&#9432; Info</a>	
+
+<style>
   @foreach($comp_1 as $comp_1)
     .comp1Fill {
       height: {{$comp_1->comp_volheid}}%;

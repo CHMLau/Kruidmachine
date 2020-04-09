@@ -99,10 +99,16 @@ li:hover .nav__line {
   margin-left: 1vw;
 }
 
+.error{
+  color: red;
+  position: absolute;
+  top: 15vh;
+}
+
 .gridcontainer{
   display: inline-grid;
   grid-column-gap: 50px;
-  grid-row-gap: 50px;
+  grid-row-gap: 35px;
   grid-template-columns: auto auto auto;
 }
 .grid_mix_container{
@@ -123,6 +129,7 @@ li:hover .nav__line {
 
 .griditem {
   transition: 0.25s;
+  margin-bottom: 2vh;
 }
 
 .griditem:hover {
@@ -143,7 +150,7 @@ li:hover .nav__line {
 }
 
 .griditem, h2{
-  margin-top: 1vh;
+  margin-top: 0.5vh;
 }
 .item_image, .item_image_mix{
   width: aut;
@@ -288,7 +295,18 @@ footer {
   border-radius: 8px;
   font-weight: 500;
   font-size: 1.4em;
+  transition: 0.25s;
 }
+
+.btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.btnMix{
+  margin-bottom: 2vh;
+}
+
 #mix_editform{
   display: inline-grid;
   grid-row-gap: 10px;
@@ -387,8 +405,6 @@ footer {
   border-radius: 18px;
 }
 
-
-
 .update_kruid {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -429,31 +445,20 @@ footer {
 
 
 
-.uitleg_1{
+#uitleg_1{
   position: absolute;
+  bottom: 24vh;
   left: 6vw;
-  width: 20vw;
+  width: 20%;
+  display: none;
 }
 
-.uitleg_2{
+#uitleg_2{
   position: absolute;
-  right: 10vw;
-  bottom: 15vh;
-  width: 30vw;
-}
-
-.uitleg_3 {
-  position: absolute;
-  left: 10vw;
-  bottom: 15vh;
-  width: 40vw;
-}
-
-.uitleg_4{
-  position: absolute;
-  right: 15vw;
-  top: 10vh;
-  width: 30vw;
+  right: 3vw;
+  bottom: 17vh;
+  width: 20%;
+  display: none;
 }
 
 .mixContainer {
@@ -549,15 +554,26 @@ footer {
   margin-top:25vh;
 
 }
-.editForm{
 
+.backButton{
+  color: black;
+  text-decoration: none;
+  font-size: 1.5em;
+  position: absolute;
+  left: 15vw;
+  top: 15vh;
 }
-.kruidEditDelete{
 
+.infoButton{
+  color: black;
+  text-decoration: none;
+  font-size: 1.5em;
+  position: absolute;
+  left: 15vw;
+  top: 15vh;
+  cursor: pointer;
 }
-.kruidButtonUpdate{
- ;
-}
+
 
 
 @media only screen and (max-width: 600px) {
@@ -659,8 +675,18 @@ footer {
   .btn_delete{
     margin: 0 0 0 0;
   }
-  
 
+  .streepje{
+    margin-right: 4px;
+  }
+
+  .streepje{
+    margin-right: 4px;
+  }
+
+  .streepje{
+    margin-right: 4px;
+  }
 
   .streepje{
     margin-right: 4px;

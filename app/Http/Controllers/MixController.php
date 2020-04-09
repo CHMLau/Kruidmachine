@@ -48,8 +48,8 @@ class MixController extends Controller
             $mix->save();
             return redirect('/mix');
         }
-        catch(Exception $e){
-            return redirect('/mix');
+        catch(\Illuminate\Database\QueryException $e){
+            return back()->withError('Make sure you have made a name for the mix. And have atleast 1 spice with the amount.');
         }
     }   
 
@@ -75,11 +75,12 @@ class MixController extends Controller
         }
 
         try{
+            
             $mix->save();
             return redirect('/mix');
         }
-        catch(Exception $e){
-            return redirect('/mix');
+        catch(\Illuminate\Database\QueryException $e){
+            return back()->withError('Make sure you have made a name for the mix. And have atleast 1 spice with the amount.');
         }
 
     }
@@ -126,11 +127,11 @@ class MixController extends Controller
             return redirect('/mix');
             }
             catch(Exception $e) {
-                return redirect('/error');
+                return back()->withError('There is one or more spices in this mix that is not in a compartiment. Choose a different mix or update the compartiments.');
             }
         }
         else {
-            return redirect('/error');
+            return back()->withError('There is one or more spices in this mix that is not in a compartiment. Choose a different mix or update the compartiments.');
         }
     }
 

@@ -1,62 +1,82 @@
 @extends('mix.layoutingelogd')
 @section('content')
+		@if (session('error'))
+			<div class="error">{{ session('error') }}</div>
+		@endif
+
+		<a href="{{ url()->previous() }}" class="backButton">&#10094; back</a>	
 	<div>
 		<form id="mix_editform" action="/mix/edit/{{$mix->naam}}" method="POST">
 			{{ csrf_field() }}
-            {{ method_field('PATCH') }}
+			{{ method_field('PATCH') }}
+			<label for="edit">Edit</label>
 			<label for="naam">Name: </label>
 			<input type="text" name="naam" value="{{$mix->naam}}">
 
-			<select name="Spice 1">
+			<label for="kruid1">Spice 1: </label>
+			<select name="kruid1">
+			<option selected disabled>Choose a Spice</option>
 			@foreach($kruid as $kruiden)
+				<option value="{{$kruiden->kruid}}">{{$kruiden->kruid}}</option>			
+			@endforeach
+			</select>
 			
-				<option value="{{$kruiden->kruid}}">{{$kruiden->kruid}}</option>
-
-			@endforeach
-			</select>
-
-			<select name="Spice 2">
+			<label for="kruid2">Spice 2: </label>
+			<select name="kruid2">
+			<option selected disabled>Choose a Spice</option>
 			@foreach($kruid as $kruiden)
-
 				<option value="{{$kruiden->kruid}}">{{$kruiden->kruid}}</option>
-
+			@endforeach
+			</select>
+			
+			<label for="kruid3">Spice 3: </label>
+			<select name="kruid3">
+			<option selected disabled>Choose a Spice</option>
+			@foreach($kruid as $kruiden)	
+				<option value="{{$kruiden->kruid}}">{{$kruiden->kruid}}</option>		
 			@endforeach
 			</select>
 
-			<select name="Spice 3">
-			@foreach($kruid as $kruiden)
-
-				<option value="{{$kruiden->kruid}}">{{$kruiden->kruid}}</option>
-
-			@endforeach
-			</select>
-
-			<select name="Quantity Spice 1">
-				<option value="">none</option>
+			<label for="Hoeveelheid1">Amount Spice 1: </label>
+			<select name="hoeveelheid1">
+			<option selected disabled>Choose an Amount</option>
 				<option value="1/2 Teaspoon">1/2 Teaspoon</option>
 				<option value="Teaspoon">Teaspoon</option>
 				<option value=" 1.5 Teaspoon">1.5 Teaspoon</option>
 				<option value="2 Teaspoon">2 Teaspoon</option>
 			</select>
 
-			<select name="Quantity Spice 2">
-				<option value="">none</option>
+			<label for="hoeveelheid2">Amount Spice 2: </label>
+			<select name="hoeveelheid2">
+				<option selected disabled>Choose an Amount</option>
+				<option value=""></option>
 				<option value="1/2 Teaspoon">1/2 theelepel</option>
 				<option value="Teaspoon"> Teaspoon</option>
 				<option value=" 1.5 Teaspoon">1.5 Teaspoon</option>
 				<option value="2 Teaspoon">2 Teaspoon</option>
 			</select>
 
-			<select name="Quantity Spice 3">
-				<option value="">none</option>
-				<option value="1/2 Teaspoon">1/2 Teaspoon</option>
+			<label for="hoeveelheid3">Amount Spice 3: </label>
+			<select name="hoeveelheid3">
+				<option selected disabled>Choose an Amount</option>
+				<option value=""></option>
+				<option value="1/2 Teaspoon">1/2 theelepel</option>
 				<option value="Teaspoon"> Teaspoon</option>
 				<option value=" 1.5 Teaspoon">1.5 Teaspoon</option>
 				<option value="2 Teaspoon">2 Teaspoon</option>
 			</select>
+			
+			<!-- <label for="hoeveelheid1">Hoeveelheid 1: </label>
+			<input type="number" name="hoeveelheid1" value="">
+			
+			<label for="hoeveelheid2">Hoeveelheid 2: </label>
+			<input type="number" name="hoeveelheid2" value="">
+			
+			<label for="hoeveelheid3">Hoeveelheid 3: </label>
+			<input type="number" name="hoeveelheid3" value=""> -->
 
-			<label for="Description">Description: </label>
-			<input type="text" name="Description" value="{{$mix->omschrijving}}">
+			<label for="omschrijving">Description: </label>
+			<input type="text" name="omschrijving" value="{{$mix->omschrijving}}">
 
 			<button id="button" type="submit" name="button" class="btn btn_update">Update</button>
 			
