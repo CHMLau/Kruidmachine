@@ -36,7 +36,7 @@
             </div>
             <div class="compSensorContainer">
                 <div class="compSensor">
-                    <div class="comp1Fill">
+                    <div class="comp2Fill">
 
                     </div>
                 </div>
@@ -61,7 +61,7 @@
             </div>
             <div class="compSensorContainer">
                 <div class="compSensor">
-                    <div class="comp1Fill">
+                    <div class="comp3Fill">
 
                     </div>
                 </div>

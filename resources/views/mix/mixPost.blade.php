@@ -38,30 +38,24 @@
 			<label for="Hoeveelheid1">Amount Spice 1: </label>
 			<select name="hoeveelheid1">
 			<option selected disabled>Choose an Amount</option>
-				<option value="1/2 Teaspoon">1/2 Teaspoon</option>
-				<option value="Teaspoon">Teaspoon</option>
-				<option value=" 1.5 Teaspoon">1.5 Teaspoon</option>
-				<option value="2 Teaspoon">2 Teaspoon</option>
+				<option value="1/2 theelepel">1/2 Teaspoon</option>
+				<option value="theelepel">Teaspoon</option>
 			</select>
 
 			<label for="hoeveelheid2">Amount Spice 2: </label>
 			<select name="hoeveelheid2">
 				<option selected disabled>Choose an Amount</option>
 				<option value=""></option>
-				<option value="1/2 Teaspoon">1/2 theelepel</option>
-				<option value="Teaspoon"> Teaspoon</option>
-				<option value=" 1.5 Teaspoon">1.5 Teaspoon</option>
-				<option value="2 Teaspoon">2 Teaspoon</option>
+				<option value="1/2 theelepel">1/2 theelepel</option>
+				<option value="theelepel"> Teaspoon</option>
 			</select>
 
 			<label for="hoeveelheid3">Amount Spice 3: </label>
 			<select name="hoeveelheid3">
 				<option selected disabled>Choose an Amount</option>
 				<option value=""></option>
-				<option value="1/2 Teaspoon">1/2 theelepel</option>
-				<option value="Teaspoon"> Teaspoon</option>
-				<option value=" 1.5 Teaspoon">1.5 Teaspoon</option>
-				<option value="2 Teaspoon">2 Teaspoon</option>
+				<option value="1/2 theelepel">1/2 theelepel</option>
+				<option value="theelepel"> Teaspoon</option>
 			</select>
 			
 			<!-- <label for="hoeveelheid1">Hoeveelheid 1: </label>
