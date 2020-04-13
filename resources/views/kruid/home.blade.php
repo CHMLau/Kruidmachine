@@ -12,5 +12,5 @@
 		@endforeach
 		<a href="{{ url('/kruid') }}" class="btn">alle kruiden <div class="btn_plus">+</div></a>
 </div>
-    
+
 @endsection

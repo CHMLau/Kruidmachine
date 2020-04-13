@@ -28,6 +28,7 @@ Route::post('/mix/nieuw','MixController@store');
 
 Route::get('/mix/edit/{mix}', 'MixController@edit')->name('editmix');
 Route::patch('/mix/edit/{mix}' , 'MixController@update');
+Route::post('/mix/edit/{mix}' , 'MixController@update');
 Route::delete('/mix/edit/{mix}','MixController@destroy');
 
 Route::get('/account','AccountController@show');
@@ -38,5 +39,3 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-
-
