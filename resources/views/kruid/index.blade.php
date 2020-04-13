@@ -4,14 +4,17 @@
 <div class='gridcontainer'>
 		@foreach($kruid as $kruid)
 			<!--<li href="{{route('editkruid', $kruid)}}"> <h1>{{$kruid->kruid}}</h1></a>-->
-			<a class="gridlink"href="{{route('editkruid', $kruid)}}">
+			<a class="gridlink">
 				<div class='griditem'>
 					<p class='item_description'>{{$kruid->kruid}}</p>
+<<<<<<< HEAD
 					<img class='item_image' src="img/kruidImages/{{$kruid->img_path}}"/>
+=======
+					<img class='item_image' src='/img/{{$kruid->img_path}}'>
+>>>>>>> 06ef1159ccdbc8e4de7b77bbe0e40a920a76bf27
 				</div>
 			</a>
 		@endforeach
-		<a href="{{ url('/kruid/nieuw') }}" class="btn_nieuw">nieuw kruid <div class="btn_plus">+</div></a>
 </div>
 
 @endsection

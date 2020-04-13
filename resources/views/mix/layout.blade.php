@@ -8,10 +8,10 @@
 	<title>MIX</title>
 </head>
 	<body>
-		<nav>
-			<a href="">
+		<nav id="layout_nav">
+			<a id ="logo" href="">
 				<!-- <img src="{{URL::asset('img/logo.png') }}" alt=""> -->
-				<img src="https://i.imgur.com/B5rIWok.png" title="source: imgur.com" />
+				<img src="../../../img/logoBlack.png" title="source: imgur.com" />
 			</a>
 			<ul>
 				<li>
@@ -35,7 +35,7 @@
 				</li>
 			</ul>
 		</nav>
-	
+
 		<main>
 			@yield('content')
 		</main>

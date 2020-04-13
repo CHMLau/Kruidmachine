@@ -1,7 +1,11 @@
-@extends('kruid.layout')
-
+@extends('kruid.layoutingelogd')
 @section('content')
-		<form id="form" action="{{action('KruidController@update', $kruid['kruid'])}}" method="POST">
+
+	<a href="{{ url()->previous() }}" class="backButton">&#10094; back</a>
+
+	<div class="editContainer">
+
+		<form class="editForm" id="form" action="{{action('KruidController@update', $kruid['kruid'])}}" method="POST">
 			{{ csrf_field() }}
       {{ method_field('PATCH') }}
 			<label for="kruid">Kruid: </label>
