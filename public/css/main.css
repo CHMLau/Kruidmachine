@@ -224,7 +224,7 @@ select{
   position: absolute;
   font-size: 2.5em;
   bottom: -22px;
-  right: -50px;   
+  right: -50px;
 }
 
 .btn_nieuw:hover {
@@ -312,7 +312,7 @@ footer {
   grid-row-gap: 10px;
 }
 #form_delete{
-  
+
   text-align: center;
   margin: 2vh 0 2vh 0;
 }
@@ -328,7 +328,7 @@ footer {
 
 .btn_delete{
   margin: 0 auto;
-} 
+}
 
 .btn_register{
   margin-top: 2vh;
@@ -390,7 +390,7 @@ footer {
 }
 .compHoeveelheid{
   margin-top:5px;
-  
+
 }
 .compSelect{
   width:200px;
@@ -480,8 +480,8 @@ footer {
 .mixContainer__naam {
   width: 25%;
   text-align:center;
-  
-} 
+
+}
 .mixContainer__kruiden {
   width: 25%;
 }
@@ -509,7 +509,7 @@ footer {
 .mixContainer__button__make, .mixContainer__button__edit {
   border: 1px solid black;
   border-radius: 15px;
-  
+
   background-color: #ffddc2;
   height: 100px;
   width: 100px;
@@ -517,7 +517,7 @@ footer {
   font-size: 1em;
 
   font-family: 'Montserrat', sans-serif;
-  
+
   transition: 0.25s;
 }
 
@@ -577,12 +577,12 @@ footer {
 
 
 @media only screen and (max-width: 600px) {
-   
+
   .compGrid{
     grid-template-columns: repeat(1, 1fr);
     margin-bottom: 8vh;
   }
-  
+
   #logo{
     position: absolute;
     top:3.5vh;
@@ -603,7 +603,7 @@ footer {
     margin: 0 auto;
     margin-bottom: -40px;
   }
-  
+
   nav li a {
     letter-spacing: 1px;
   }
@@ -611,28 +611,34 @@ footer {
     text-align: center;
     margin-top: 0vh;
   }
-  
+  .card-header{
+    margin-bottom: 20px;
+  }
   #account_forgotdiv,#account_rememberdiv{
-    display: inline-block;
+    display: block;
   }
   #account_rememberdiv{
-    margin-bottom:200px;
+    margin-top:20px;
+    margin-bottom:10px;
 
   }
   #account_resetbutton{
+    margin-top: 15px;
     font-size: 1em;
   }
-
+  #account_forgotdiv{
+    margin-bottom:10px;
+  }
   .gridcontainer{
     display: inline-grid;
     grid-row-gap: 10px;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     grid-template-columns: auto auto;
-    margin: 0 auto; 
+    margin: 0 auto;
   }
   .grid_mix_container{
-    margin: 0 auto; 
+    margin: 0 auto;
     grid-row-gap: 10px;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
@@ -642,7 +648,26 @@ footer {
     font-size: 24px;
     text-align: center;
   }
+  .infoButton{
+    font-size: 1.2em;
+    left: 41%;
+    top: 120px;
+  }
+  #uitleg_1{
+    position: absolute;
+    bottom: 23vh;
+    left: 2vw;
+    width: 30%;
+    display: none;
+  }
 
+  #uitleg_2{
+    position: absolute;
+    right: 3vw;
+    bottom: 13%;
+    width: 30%;
+    display: none;
+  }
   .griditem, h2{
     font-size: 16px;
 
@@ -655,22 +680,22 @@ footer {
   }
   .grid_mix_item{
     width: 300px;
-    
+
   }
   #mix_editform{
     display: inline-grid;
     grid-row-gap: 10px;
     margin: 0 auto;
     text-align: center;
-  } 
-  
-    #form_delete{ 
+  }
+
+    #form_delete{
     display: block;
     margin-top: 3vh;
     margin-bottom: 3vh;
     text-align: center;
     height: 4vh;
-    
+
   }
   .btn_delete{
     margin: 0 0 0 0;
@@ -712,6 +737,4 @@ footer {
   .item_image, .item_image_mix {
       margin: 0;
   }
-} 
-
-  
+}

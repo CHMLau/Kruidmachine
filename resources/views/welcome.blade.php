@@ -79,7 +79,7 @@
         </div>
 </div>
 
-<a class="infoButton">&#9432; Info</a>	
+<a class="infoButton">&#9432; Info</a>
 
 <style>
   @foreach($comp_1 as $comp_1)
@@ -108,5 +108,5 @@
     <img src="../../../img/add1.png" id="uitleg_2" class="uitleg uitleg_2" title="uitleg enzo" />
     <img src="../../../img/mix.png" id="uitleg_3" class="uitleg uitleg_3" title="uitleg enzo" />
     <img src="../../../img/menu.png" id="uitleg_4" class="uitleg uitleg_4" title="uitleg enzo" />
-    
+
 @endsection--}}
