@@ -20,4 +20,8 @@
 			<button onclick="return confirm('Are you sure?')" id="button" type="submit" name="button" class="btn btn_delete kruidEditDelete">Delete</button>
 		</form>
 	</div>
+
+	<div class="btn_plus_footer">
+		<a href="{{ url()->previous() }}" class="back_btn_phone">&#10094; Back</a>	
+	</div>
 @endsection

@@ -24,6 +24,7 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
           align-items: center;
+          padding-bottom: 100px;
 }
 
 /* a {
@@ -318,10 +319,8 @@ footer {
   text-align: center;
   margin: 2vh 0 2vh 0;
 }
-.btn_delete{
-  margin: 0 auto;
-}
-.btn_update{
+
+.btn_update {
   position: relative;
   margin-left: 10vw;
   margin-right: 10vw;
@@ -413,9 +412,9 @@ footer {
   height: 5vh;
   margin-top: 2vh;
   padding-top: 1vh;
-  border-radius: 20px;
+  border-radius: 10px;
   border: 1px solid black;
-  background-color: #f5d1b5;
+  background-color: #ffddc2;
   text-align: center;
  
   letter-spacing:2px;
@@ -490,7 +489,10 @@ footer {
 }
 
 .mixContainer__buttons {
-  width: 25%;
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .mixContainer__kruiden li {
@@ -591,14 +593,31 @@ footer {
 .kruidEditDelete{
   width: 200px;
 }
+
+.btn_delete{
+  margin: 0 0 0 0;
+}
+
 @media only screen and (max-width: 1050px) {
+
+  .btn_update {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 2vh;
+  }
+
+  .mixContainer__button__make, .mixContainer__button__edit {
+    height: 75px;
+    width: 75px;
+  }
 
   .mixContainer {
     display: flex;
     flex-direction: column;
-    width: 125%;
-    height: 80vh;
-    transform: translateX(-12.5%);
+    width: 150%;
+    height: 75vh;
+    transform: translateX(-16%);
   }
 
   .mixContainer__naam {
@@ -748,7 +767,7 @@ footer {
     
   }
   .btn_delete{
-    margin: 0 0 0 0;
+    width: 100%;
   }
   
   .streepje{

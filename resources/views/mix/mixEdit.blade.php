@@ -2,14 +2,12 @@
 @section('content')
 		@if (session('error'))
 			<div class="error">{{ session('error') }}</div>
-		@endif
-
-		<a href="{{ url()->previous() }}" class="backButton">&#10094; back</a>	
+		@endif	
 	<div>
 		<form id="mix_editform" action="/mix/edit/{{$mix->naam}}" method="POST">
 			{{ csrf_field() }}
 			{{ method_field('PATCH') }}
-			<label for="edit">Edit</label>
+			<label for="edit">Edit mix</label>
 			<label for="naam">Name: </label>
 			<input type="text" name="naam" value="{{$mix->naam}}">
 
