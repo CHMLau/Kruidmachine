@@ -46,7 +46,10 @@
 				</form>	
 			</div>
 		</div>
-  	@endforeach
-	  <a href="{{ url('/mix/nieuw') }}" class="btn_nieuw">New mix<div class="btn_plus">+</div></a> 
+	  @endforeach
+	  <div class="btn_plus_footer">
+		  <a href="{{ url('/mix/nieuw') }}" class="btn_nieuw">New mix<div class="btn_plus">+</div></a> 
+		  <a href="{{ url()->previous() }}" class="back_btn_phone">&#10094; Back</a>
+	  </div>
 	</div>
 @endsection

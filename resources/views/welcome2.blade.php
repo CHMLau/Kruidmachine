@@ -1,4 +1,4 @@
-@extends('layouts.home')
+@extends('layouts.homeingelogd')
 @section('content')
 
     <img src="../../../img/textuitleg.png" id="uitleg_1" class="uitleg" title="uitleg enzo" />

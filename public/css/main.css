@@ -23,8 +23,6 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
           align-items: center;
 }
 
@@ -111,11 +109,13 @@ li:hover .nav__line {
   grid-row-gap: 35px;
   grid-template-columns: auto auto auto;
 }
+
 .grid_mix_container{
   display: inline-grid;
   grid-row-gap: 20px;
   grid-template-columns: auto;
 }
+
 .griditem, .grid_mix_item{
   position: relative;
   text-align: center;
@@ -152,11 +152,13 @@ li:hover .nav__line {
 .griditem, h2{
   margin-top: 0.5vh;
 }
+
 .item_image, .item_image_mix{
   width: aut;
   height: 45%;
   margin: 10px auto 10px auto;
 }
+
 .item_image_mix{
   position: static;
   left: 1vw;
@@ -171,6 +173,7 @@ li:hover .nav__line {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
 .gridlink{
   text-decoration: none;
   color: inherit;
@@ -182,7 +185,7 @@ li:hover .nav__line {
   grid-template-columns: auto;
 }
 
-input{
+input {
   font-family: 'Montserrat', sans-serif;
   font-size: 1em;
   font-weight: 400;
@@ -195,12 +198,12 @@ input{
   border: 1px solid black;
 }
 
-select{
+select {
   outline: 0;
   box-shadow: none;
   background-image: none;
   background-color: rgba(0, 0, 0, 0);
-  width: 20em;
+  width: 100%;
   height: 3em;
   border-radius: 8px;
   border: 1px solid black;
@@ -235,7 +238,6 @@ label{
   color: black;
   font-weight: 600;
   font-size: 1.3em;
-
 }
 
 footer {
@@ -326,10 +328,6 @@ footer {
   margin-top: 2vh;
 }
 
-.btn_delete{
-  margin: 0 auto;
-} 
-
 .btn_register{
   margin-top: 2vh;
   margin-bottom: 8vh;
@@ -414,11 +412,12 @@ footer {
   width: 200px;
   height: 5vh;
   margin-top: 2vh;
+  padding-top: 1vh;
   border-radius: 20px;
   border: 1px solid black;
   background-color: #f5d1b5;
   text-align: center;
-  padding-top: 1vh;
+ 
   letter-spacing:2px;
   color: black;
   text-decoration: none;
@@ -574,9 +573,75 @@ footer {
   cursor: pointer;
 }
 
+.back_btn_phone {
+  display: none;
+}
 
 
-@media only screen and (max-width: 600px) {
+.kruid_deleteForm{
+  margin: 20px auto;  
+  text-align: center;
+}
+
+.kruidButtonUpdate{
+  display: block;
+  margin: 30px auto 0 auto;
+  width: 200px;
+}
+.kruidEditDelete{
+  width: 200px;
+}
+@media only screen and (max-width: 1050px) {
+
+  .mixContainer {
+    display: flex;
+    flex-direction: column;
+    width: 125%;
+    height: 80vh;
+    transform: translateX(-12.5%);
+  }
+
+  .mixContainer__naam {
+    width: 100%;
+    text-align:center;
+    
+  } 
+  .mixContainer__kruiden {
+    width: 100%;
+  }
+  
+  .mixContainer__hoeveelheid {
+    width: 100%;
+  }
+  
+  .mixContainer__buttons {
+    width: 75%;
+    display: flex;
+    justify-content: space-evenly;
+
+  }
+  
+  
+  main label {
+    align-self: left;
+  }
+
+  main {
+    padding-bottom: 100px;
+  }
+
+  .btn_plus_footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    height: 10vh;
+    width: 100%;
+    background-color: #f5d1b5;
+  }
+
+  .infoButton {
+    display: none;
+  }
    
   .compGrid{
     grid-template-columns: repeat(1, 1fr);
@@ -598,7 +663,8 @@ footer {
     height: 30px;
     margin: 10vh 0;
   }
-  nav{
+
+  nav {
     width: 480px;
     margin: 0 auto;
     margin-bottom: -40px;
@@ -606,23 +672,28 @@ footer {
   
   nav li a {
     letter-spacing: 1px;
+    font-size: 1.25em;
   }
   .card{
-    text-align: center;
-    margin-top: 0vh;
+    text-align: left;
   }
   
   #account_forgotdiv,#account_rememberdiv{
-    display: inline-block;
+    display: block;
   }
   #account_rememberdiv{
-    margin-bottom:200px;
-
+    margin-top: 5px;
+    margin-bottom:10px;
+  }
+  #account_forgotdiv{
+    margin-bottom: 20px;
   }
   #account_resetbutton{
     font-size: 1em;
   }
-
+  .container{
+    margin-top: -8vh;
+  }
   .gridcontainer{
     display: inline-grid;
     grid-row-gap: 10px;
@@ -647,6 +718,9 @@ footer {
     font-size: 16px;
 
   }
+  .invalid-feedback{
+    display:block;
+  }
   .griditem, .grid_mix_item{
     width: 40vw;
     height: 20vh;
@@ -658,10 +732,11 @@ footer {
     
   }
   #mix_editform{
-    display: inline-grid;
+    /* display: inline-grid; */
     grid-row-gap: 10px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
+
   } 
   
     #form_delete{ 
@@ -675,26 +750,15 @@ footer {
   .btn_delete{
     margin: 0 0 0 0;
   }
-
+  
   .streepje{
-    margin-right: 4px;
-  }
-
-  .streepje{
-    margin-right: 4px;
-  }
-
-  .streepje{
-    margin-right: 4px;
-  }
-
-  .streepje{
-    margin-right: 4px;
-    margin-left: 4px;
+    display: none;
+    margin-right: 2px;
+    margin-left: 2px;
   }
 
   .btn_nieuw{
-    bottom: 10vh;
+    bottom: 3.5vh;
     right: 50px;
     font-size: 1em;
   }
@@ -712,6 +776,66 @@ footer {
   .item_image, .item_image_mix {
       margin: 0;
   }
+  .container{
+    display:flex;
+    justify-content: center;
+  }
+  .form-group{
+    margin-bottom: 3vh;
+  }
+  .editForm{
+    width: 100%;
+  }
+  .editForm input{
+    padding-right:0;
+  }
+
+  .kruidEdit_container{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    top: 300px;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  }
+  .kruid_deleteForm{
+    margin-top: 5%;
+
+  }
+  .kruidEdit_input{
+    margin-top: 10px;
+    height: 50px;
+  }
+  .kruidButtonUpdate{
+    position: relative;
+    margin: 20px 0 0 0;
+    width: 100%;
+  }
+  
+  .kruidEditDelete{
+    display: inline-block;
+    width: 100%;
+  }
+
+
+
+  .back_btn_phone {
+    display: block;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    
+    color: black;
+    font-size: 1em;
+    text-decoration: none;
+    letter-spacing: 5px;
+  }
+  
+  .update_kruid2{
+    padding-top: 0vh;
+  }
+
 } 
 
   

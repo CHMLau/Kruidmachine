@@ -11,7 +11,10 @@
 				</div>
 			</a>
 		@endforeach
-		<a href="{{ url('/kruid/nieuw') }}" class="btn_nieuw">New spice <div class="btn_plus">+</div></a>
 </div>
-    
+<div class="btn_plus_footer">
+	<a href="{{ url('/kruid/nieuw') }}" class="btn_nieuw">New spice <div class="btn_plus">+</div></a>
+	<a href="{{ url()->previous() }}" class="back_btn_phone">&#10094; Back</a>
+</div>
+
 @endsection

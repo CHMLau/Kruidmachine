@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/kruid','KruidController@show');
+Route::get('/kruid','KruidController@show')->middleware('auth');
 
 // ------------------ compartiment aanpassen -----------------
 Route::get('/kruid/nieuw','KruidController@create');
@@ -30,7 +30,7 @@ Route::patch('/kruid/edit/{kruid}','KruidController@update');
 Route::delete('/kruid/edit/{kruid}','KruidController@destroy');
 
 Route::get('/allemixes','MixController@show');
-Route::get('/mix','MixController@show_gebruikerMix');
+Route::get('/mix','MixController@show_gebruikerMix')->middleware('auth');
 Route::get('/mix/nieuw','MixController@create');
 Route::post('/mix/nieuw','MixController@store');
 

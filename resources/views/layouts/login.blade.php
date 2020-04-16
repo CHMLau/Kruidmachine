@@ -9,7 +9,7 @@
 </head>
 	<body>
 		<nav id="layout_nav">
-			<a id ="logo" href="">
+			<a id ="logo" href="{{ url('/')}}">
 				<!-- <img src="{{ asset('img/logo.png') }}" alt=""> -->
 				<img src="../../../img/logoBlack.png" title="source: imgur.com" />
 			</a>
