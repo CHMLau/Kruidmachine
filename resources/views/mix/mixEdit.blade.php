@@ -37,21 +37,21 @@
 
 			<label for="Hoeveelheid1">Amount Spice 1: </label>
 			<select name="hoeveelheid1">
-			<option selected>{{$mix->hoeveelheid1}}</option>
+			
 				<option value="1/2 theelepel">1/2 Teaspoon</option>
 				<option value="theelepel">Teaspoon</option>
 			</select>
 
 			<label for="hoeveelheid2">Amount Spice 2: </label>
 			<select name="hoeveelheid2">
-				<option selected>{{$mix->hoeveelheid2}}</option>
+				
 				<option value="1/2 theelepel">1/2 theelepel</option>
 				<option value="theelepel"> Teaspoon</option>
 			</select>
 
 			<label for="hoeveelheid3">Amount Spice 3: </label>
 			<select name="hoeveelheid3">
-				<option selected>{{$mix->hoeveelheid3}}</option>
+				
 				<option value="1/2 theelepel">1/2 theelepel</option>
 				<option value="theelepel"> Teaspoon</option>
 			</select>
