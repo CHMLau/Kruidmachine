@@ -13,7 +13,9 @@ class KruidController extends Controller
         if((Auth::user()) == NULL){
             return view('kruid.index')->with('kruid', Kruid::all());
         }
-        return view('kruid.index2')->with('kruid', Kruid::all());
+        else {
+			return view('kruid.index2')->with('kruid', Kruid::all());
+		}
     }
     public function show_comp(){
         return view('kruid.kruidComp');

@@ -31,41 +31,41 @@ while True:
             port.write("c1")
             mydb.commit()
             print("comp1: theelepel")
-            time.sleep(1.5)
+            time.sleep(2)
 
 
         if (x[0] == '1/2 theelepel'):
             port.write("c2")
             mydb.commit()
             print("comp1: 1/2 theelepel")
-            time.sleep(1.5)
+            time.sleep(1)
             #hier de tijd die nodig is per compartiment ook doorsturen als we met miligrammen gaan werken
 
         if (x[1] == 'theelepel'):
             port.write("c3")
             mydb.commit()
             print("comp2: theelepel")
-            time.sleep(1.5)
+            time.sleep(2)
 
 
         if (x[1] == '1/2 theelepel'):
             port.write("c4")
             mydb.commit()
             print("comp2: 1/2 theelepel")
-            time.sleep(1.5)
+            time.sleep(1)
 
         if (x[2] == 'theelepel'):
             port.write("c5")
             mydb.commit()
             print("comp3: theelepel")
-            time.sleep(1.5)
+            time.sleep(2)
 
 
         if (x[2] == '1/2 theelepel'):
             port.write("c6")
             mydb.commit()
             print("comp3: 1/2 theelepel")
-            time.sleep(1.5)
+            time.sleep(1)
 
     os.system("python mix_uit.py")
     port.write("c0")
